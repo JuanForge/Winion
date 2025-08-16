@@ -132,6 +132,14 @@ Permet d’obtenir la version en cours de développement (peut contenir des bugs
   git clone https://github.com/JuanForge/AutoTranslation.git
 ```
 
+# Mes recommandations de modules pour votre protection
+|      nom      |   taille   | description |
+|---------------|------------|-------------|
+| VeraCrypt     |   45.5 Mo  |Logiciel qui chiffre vos fichiers et disques pour les protéger par mot de passe.|
+| GetSession    |   433 Mo   |Une messagerie sécurisée qui chiffre vos messages et protège votre anonymat, sans numéro ni e-mail.|
+
+
+
 
 # ⌨️ 2 - Commande
 
