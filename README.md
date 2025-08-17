@@ -12,8 +12,6 @@
 
 
 
-
-
 # 🇫🇷 Un Projet 100% Français, et j'en suis extrêmement fier !
 
 Winion est un projet conçu et développé en France, avec passion et enthousiasme. Il s'agit d'un interpréteur de commandes avancé qui apporte l’expérience Linux sur Windows, avec des commandes modifiées et optimisées.
@@ -308,6 +306,14 @@ D'autres langues pourront être ajoutées en fonction des contributions et des d
 |:-----------:|:--------------:|:-------:|:--------:|:----:|
 | 0.00.01     |08.03.2025.18.00| 3.11.9  |08.03.2025|  ❌  |
 
+# 💰 Soutenir le projet
+
+Si vous appréciez Winion et souhaitez soutenir son développement, vous pouvez faire un don en Monero (XMR) :
+
+**Adresse XMR :** `8B5au9xKX7u9jcQvaA56xW1AwmxPC7tAwFW5pKSVw9xaPi5tMxqh5YD5Zb89oYKkCc42SsDi9G2XFAbaZfrTDNJ7B8pMYgT`
+<img src="media/Monero.png" alt="MoneroICO" width="300">
+
+Merci pour votre soutien ! 🙏
 
 # 🛡️ Clause de non-responsabilité (Disclaimer)
 Ce logiciel est fourni "tel quel", sans aucune garantie explicite ou implicite, y compris mais sans s’y limiter, les garanties de qualité marchande, d’adéquation à un usage particulier, ou d’absence de virus, de comportements indésirables ou de dommages indirects.
