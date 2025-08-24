@@ -1,3 +1,5 @@
+# Le projet a pris du retard car il sera livré dans une version plus avancée que le prototype initial, prévue pour septembre 2025.
+
 # 🚨⚠️ Face aux propositions de vote à l’UE qui piétinent les droits fondamentaux à l’anonymat et à la liberté, ce logiciel a été publié en urgence, bien plus tôt que prévu. Il est une arme numérique destinée à défendre vos droits et à résister à la surveillance de masse, en fournissant des modules puissants permettant des communications chiffrées de bout en bout, hors d’atteinte de toute censure. ⚠️🚨
 
 
