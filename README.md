@@ -64,6 +64,7 @@ L'objectif est de simuler la logique et l'efficacité d’un shell Unix, sans le
 - ❌ Linux et MacOS non supportés
 
 ## Sommaire
+- [Translation](#-Translation)
 - [Présentation](#-un-projet-100-français-et-jen-suis-extrêmement-fier-)
 - [Statut du projet](#-actuellement-privé-bientôt-open-source)
 - [Fonctionnalités](#-il-permet-de-faire-quoi-)
@@ -97,14 +98,12 @@ Que ce soit pour installer des programmes, télécharger des fichiers, contourne
 Par défaut, Winion utilise [WinionSourceAPT](https://github.com/JuanForge/WinionSourceAPT) comme catalogue principal pour la gestion de paquets. Cela permet d’accéder à une vaste collection de logiciels, extensions et outils, tout en facilitant l'installation et la mise à jour des paquets directement depuis le terminal.
 
 
-# 1 - 💻 Installation et traduction 🌍
+# 1 - 💻 Installation
 
 
 ## 💾 Installation recommandée (Release)
 📢 Nous recommandons fortement d’utiliser les releases officielles afin de bénéficier d’une version stable, complète et prête à l’emploi.
 Téléchargez la dernière version [**ici**](https://github.com/JuanForge/Winion/releases/latest).
-
-
 
 
 ## 🛠 Installation alternative (sources Git)
@@ -113,26 +112,65 @@ Permet d’obtenir la version en cours de développement (peut contenir des bugs
 ```bash
   git clone https://github.com/JuanForge/Winion.git
   cd Winion
-  pip install -r requirement-Win.txt
-  python Main.py
+  pip install -r requirements.txt
+  python Main.py --boot
 ```
 
-### 🌍 Installer le Module de traduction automatique.
-#### 👨‍💻 Depuis le Terminal .
 
-```sh
-  apt update --all
-  apt install AutoTranslation -y
+
+
+# 🌍 Translation.
+
+Normally, Winion directly includes French, English, and Spanish in its release versions.
+
+To check the language being used, launch Winion and type:
+
+```
+addLANG --lang-used
 ```
 
-#### 💾 Depuis Git .
+This command will display the ISO code of the currently used language. By default, Winion uses the language configured in your operating system.
 
-```sh
-  cd /Module/
-  git clone https://github.com/JuanForge/AutoTranslation.git
+If Winion starts in a language different from your OS, it is likely that the `.mo` file for your language is missing. This is **normal**, as not all languages are provided by default.
+
+In this case:
+
+1. Go to the releases page and choose the version corresponding to your Winion installation.
+2. Look for `.mo` files available next to the sources and builds.
+3. Download the file corresponding to your language: `"EN"` for English, `"ES"` for Spanish, etc.
+
+To install the file:
+
+* Launch Winion normally and type:
+
+```
+addlang
 ```
 
-# Mes recommandations de modules pour votre protection
+The file explorer will open so you can select the `.mo` file you just downloaded.
+
+**Note:** If you are using a NO-GUI version (visible in the menu), you will need to provide the full file path as an argument, for example:
+
+```
+addlang ~/Downloads/Winion_EN.English.mo
+```
+
+Once the file is selected, a confirmation with "✅" should appear. Then simply restart Winion: your language will be applied.
+
+If the language is still not applied, the last solution is to run:
+
+```
+addLANG --force <ISO>
+```
+
+where `<ISO>` corresponds to your language code. Then restart Winion to apply the configuration.
+
+INFO: It is possible that your language is not available as a `.mo` file.
+In this case, there is no automatic solution: you can either request it to be added (by me or another team member), or, if you wish and have the skills, create it yourself from the sources.
+
+
+
+# Mes recommandations de modules pour votre protection.
 |      nom      |   taille   | description |
 |---------------|------------|-------------|
 | VeraCrypt     |   45.5 Mo  |Logiciel qui chiffre vos fichiers et disques pour les protéger par mot de passe.|
@@ -287,9 +325,9 @@ Les traductions dans d’autres langues seront ajoutées plus tard, soit par tra
 
 |   Langue   | Prévu | Présent  | Mode de traduction |
 |:----------:|:-----:|:--------:|:-------------------:
-|  Anglais   |  ✅  |    ❌    |         🤝         |
+|  Anglais   |  ✅  |    ✅    |         🤖         |
 |  Allemand  |  ✅  |    ❌    |         🤝         |
-|  Espagnol  |  ✅  |    ❌    |         🤝         |
+|  Espagnol  |  ✅  |    ✅    |         🤖         |
 |  Italien   |  ❌  |    ❌    |
 |  Russe     |  ✅  |    ❌    |         🤖         |
 |  Français  |  ✅  |    ✅    |         🤝         |
