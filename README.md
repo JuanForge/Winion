@@ -1,15 +1,24 @@
+![banner.apng](media/banner.apng)
+
+<p align="center">
+   <a href="https://t.me/+8En2a00ChksxYzVk">Telegram</a> ・ <a href="https://discord.gg/TNbvWFGwam">Discord</a> ・ <a href="05d6aabf549e3d71180341db6ccaf9cd73f8413d4c88b1031eb7e806bb81ceda02">Session</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/JuanForge/Winion?label=Version&color=00FF00">
+  <img src="https://img.shields.io/github/stars/JuanForge/Winion?style=flat&label=Stars&color=00FF00">
+  <img src="https://img.shields.io/github/repo-size/JuanForge/Winion?label=Size&color=00FF00">
+  <img src="https://img.shields.io/github/languages/top/JuanForge/Winion?color=00FF00">
+  <img src="https://img.shields.io/badge/Platform-Windows-blue?style=flat&logo=windows&logoColor=white">
+  <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-blue">
+  <img src="https://img.shields.io/github/last-commit/JuanForge/Winion.svg">
+  <img src="https://img.shields.io/badge/TikTok-@winionbyjuan-dc143c?style=flat&logo=tiktok&logoColor=white">
+  <img src="https://img.shields.io/badge/Discord-Rejoindre-5865f2?style=flat&logo=discord&logoColor=white">
+</p>
+
 # Le projet a pris du retard car il sera livré dans une version plus avancée que le prototype initial, prévue pour septembre 2025.
 ## Dernière nouvelle : les traductions seront désormais disponibles en français, anglais et espagnol.
 # 🚨⚠️ Face aux propositions de vote à l’UE qui piétinent les droits fondamentaux à l’anonymat et à la liberté, ce logiciel a été publié en urgence, bien plus tôt que prévu. Il est une arme numérique destinée à défendre vos droits et à résister à la surveillance de masse, en fournissant des modules puissants permettant des communications chiffrées de bout en bout, hors d’atteinte de toute censure. ⚠️🚨
-
-
-
-
-[![Only Windows](https://img.shields.io/badge/Platform-Windows-blue?style=flat&logo=windows&logoColor=white)](#)
-
-![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-blue) 		![Language](https://img.shields.io/github/languages/top/JuanForge/Winion.svg) ![Last Commit](https://img.shields.io/github/last-commit/JuanForge/Winion.svg) ![GitHub stars](https://img.shields.io/github/stars/JuanForge/Winion.svg?style=social) 
-
-![TikTok](https://img.shields.io/badge/TikTok-@winionbyjuan-dc143c?style=flat&logo=tiktok&logoColor=white) 	![Discord](https://img.shields.io/badge/Discord-Rejoindre-5865f2?style=flat&logo=discord&logoColor=white) ![Twitch](https://img.shields.io/badge/Twitch-Live-9146ff?style=flat&logo=twitch&logoColor=white)
 
 
 
