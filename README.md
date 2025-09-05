@@ -16,8 +16,6 @@
   <img src="https://img.shields.io/badge/Discord-Rejoindre-5865f2?style=flat&logo=discord&logoColor=white">
 </p>
 
-# Le projet a pris du retard car il sera livré dans une version plus avancée que le prototype initial, prévue pour septembre 2025.
-## Dernière nouvelle : les traductions seront désormais disponibles en français, anglais et espagnol.
 # 🚨⚠️ Face aux propositions de vote à l’UE qui piétinent les droits fondamentaux à l’anonymat et à la liberté, ce logiciel a été publié en urgence, bien plus tôt que prévu. Il est une arme numérique destinée à défendre vos droits et à résister à la surveillance de masse, en fournissant des modules puissants permettant des communications chiffrées de bout en bout, hors d’atteinte de toute censure. ⚠️🚨
 
 
@@ -63,30 +61,38 @@ Pour plus d’informations, consultez la licence officielle :
 
 
 
-# ❗️ Winion n'est pas une émulation.
-Il ne cherche pas à reproduire un noyau Linux ou à imiter bas niveau un terminal Unix.
-C’est une simulation avancée : il recrée l'expérience utilisateur, les comportements des commandes, et les interactions typiques d'un shell Linux, tout en fonctionnant nativement sous Windows.
-Les commandes ont été réécrites ou adaptées pour tirer parti des spécificités de l'environnement Windows tout en respectant la logique Unix.
-L'objectif est de simuler la logique et l'efficacité d’un shell Unix, sans les lourdeurs d’une virtualisation ou émulation complète.
+# ❗️ Winion is not an emulation.
+It does not aim to reproduce a Linux kernel or to mimic a Unix terminal at a low level.
+It is an advanced simulation: it recreates the user experience, command behaviors, and typical interactions of a Linux shell, while running natively on Windows.
+The commands have been rewritten or adapted to take advantage of the specifics of the Windows environment while respecting Unix logic.
+The goal is to simulate the logic and efficiency of a Unix shell, without the overhead of full virtualization or emulation.
 
 - ✅ Windows 10/11 uniquement
 - ❌ Linux et MacOS non supportés
 
 ## Sommaire
+- [Information](#ℹ%EF%B8%8F-information)
 - [Translation](#-Translation)
 - [Présentation](#-un-projet-100-français-et-jen-suis-extrêmement-fier-)
 - [Statut du projet](#-actuellement-privé-bientôt-open-source)
 - [Fonctionnalités](#-il-permet-de-faire-quoi-)
-- [Installation](#-1---installation-et-traduction-)
-- [Commandes](#-2---commande)
+- [Installation](#-Recommended-Installation-release)
+- [Commandes](#%EF%B8%8F-2---commande)
 - [Développeurs](#-3---développeur)
 - [FAQ](#-4---faq)
 - [Support multilingue](#-5---support-multilingue)
 - [Auteurs](#auteurs)
+- [Sustain](#-Sustain-the-project)
 - [Releases](#download-releases)
 - [License](#-licence-et-conditions-dutilisation-%EF%B8%8F)
 
 
+# ℹ️ Information
+### 1: Some parts of the README are quite old, which means that certain features are no longer available or not yet implemented.
+
+### 2: Latest news: translations will now be available in French, English, and Spanish.
+
+### 3: The project has been delayed because it will be released in a more advanced version than the initial prototype, scheduled for September 2025.
 
 # 🔒 Actuellement Privé, Bientôt Open Source
 Winion est pour l’instant un projet privé, mais une fois qu’il aura une communauté assez grande, il passera en open source pour que chacun puisse contribuer et l’améliorer.
@@ -109,10 +115,10 @@ Par défaut, Winion utilise [WinionSourceAPT](https://github.com/JuanForge/Winio
 
 # 1 - 💻 Installation
 
-
-## 💾 Installation recommandée (Release)
-📢 Nous recommandons fortement d’utiliser les releases officielles afin de bénéficier d’une version stable, complète et prête à l’emploi.
-Téléchargez la dernière version [**ici**](https://github.com/JuanForge/Winion/releases/latest).
+## 💾 Recommended Installation (Release)
+📢 We strongly recommend using the official releases to benefit from a stable, complete, and ready-to-use version.
+Download the latest version [**here**](https://github.com/JuanForge/Winion/releases/latest) (WinionSetup.exe).
+[![How to install Winion (installer) and module Ntop!](https://img.youtube.com/vi/dEWdlBmZ1_o/0.jpg)](https://www.youtube.com/watch?v=dEWdlBmZ1_o)
 
 
 ## 🛠 Installation alternative (sources Git)
@@ -124,8 +130,6 @@ Permet d’obtenir la version en cours de développement (peut contenir des bugs
   pip install -r requirements.txt
   python Main.py --boot
 ```
-
-
 
 
 # 🌍 Translation.
@@ -350,19 +354,20 @@ D'autres langues pourront être ajoutées en fonction des contributions et des d
 
 - [@WinionByJuan](https://www.tiktok.com/@winionbyjuan)
 
-## Download Releases
-| Version     |      Build     |PyVersion|   Date   | Lien |
-|:-----------:|:--------------:|:-------:|:--------:|:----:|
-| 0.00.01     |08.03.2025.18.00| 3.11.9  |08.03.2025|  ❌  |
 
-# 💰 Soutenir le projet
+# 💰 Sustain the project
 
-Si vous appréciez Winion et souhaitez soutenir son développement, vous pouvez faire un don en Monero (XMR) :
+If you enjoy Winion and would like to support its development, you can make a donation in Monero (XMR):
 
-**Adresse XMR :** `8B5au9xKX7u9jcQvaA56xW1AwmxPC7tAwFW5pKSVw9xaPi5tMxqh5YD5Zb89oYKkCc42SsDi9G2XFAbaZfrTDNJ7B8pMYgT`
+**XMR Address :** `8B5au9xKX7u9jcQvaA56xW1AwmxPC7tAwFW5pKSVw9xaPi5tMxqh5YD5Zb89oYKkCc42SsDi9G2XFAbaZfrTDNJ7B8pMYgT`
 <img src="media/Monero.png" alt="MoneroICO" width="300">
 
 Merci pour votre soutien ! 🙏
+
+## Download Releases
+| Version     |      Build     |PyVersion|   Date   | Lien |
+|:-----------:|:--------------:|:-------:|:--------:|:----:|
+| 0.0.1-alpha |      ----      | 3.11.9  |   ----   |  ❌  |
 
 # 🛡️ Clause de non-responsabilité (Disclaimer)
 Ce logiciel est fourni "tel quel", sans aucune garantie explicite ou implicite, y compris mais sans s’y limiter, les garanties de qualité marchande, d’adéquation à un usage particulier, ou d’absence de virus, de comportements indésirables ou de dommages indirects.
