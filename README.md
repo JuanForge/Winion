@@ -84,6 +84,7 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 - [Auteurs](#auteurs)
 - [Sustain](#-Sustain-the-project)
 - [Releases](#download-releases)
+- [Star History](#star-history)
 - [License](#-licence-et-conditions-dutilisation-%EF%B8%8F)
 
 
@@ -368,6 +369,10 @@ Merci pour votre soutien ! 🙏
 | Version     |      Build     |PyVersion|   Date   | Lien |
 |:-----------:|:--------------:|:-------:|:--------:|:----:|
 | 0.0.1-alpha |      ----      | 3.11.9  |   ----   |  ❌  |
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=JuanForge/Winion&type=Date)](https://www.star-history.com/#JuanForge/Winion&Date)
 
 # 🛡️ Clause de non-responsabilité (Disclaimer)
 Ce logiciel est fourni "tel quel", sans aucune garantie explicite ou implicite, y compris mais sans s’y limiter, les garanties de qualité marchande, d’adéquation à un usage particulier, ou d’absence de virus, de comportements indésirables ou de dommages indirects.
