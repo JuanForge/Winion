@@ -73,14 +73,14 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 ## Sommaire
 - [Information](#ℹ%EF%B8%8F-information)
 - [Translation](#-Translation)
-- [Présentation](#-un-projet-100-français-et-jen-suis-extrêmement-fier-)
-- [Statut du projet](#-actuellement-privé-bientôt-open-source)
-- [Fonctionnalités](#-il-permet-de-faire-quoi-)
+- [Presentation](#-a-100-french-project-and-i-am-extremely-proud-of-it)
+- [Project Status](#-actuellement-privé-bientôt-open-source)
+- [Functionality](#what-does-it-allow-you-to-do-)
 - [Installation](#-Recommended-Installation-release)
 - [Commandes](#%EF%B8%8F-2---commande)
-- [Développeurs](#-3---développeur)
+- [Developers](#-3---développeur)
 - [FAQ](#-4---faq)
-- [Support multilingue](#-5---support-multilingue)
+- [Multilingual support](#-5---support-multilingue)
 - [Auteurs](#auteurs)
 - [Sustain](#-Sustain-the-project)
 - [Releases](#download-releases)
@@ -102,20 +102,20 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 # 🔒 Actuellement Privé, Bientôt Open Source
 Winion est pour l’instant un projet privé, mais une fois qu’il aura une communauté assez grande, il passera en open source pour que chacun puisse contribuer et l’améliorer.
 
-# Il permet de faire quoi ?
-⚡ Winion : Un Terminal Sans Limites !
-Winion est bien plus qu'un simple interpréteur de commandes. Il intègre une simulation d'apt, prend en charge des milliers de modules et repose sur des fournisseurs de packages externes pour offrir une puissance inégalée, il permet d’accéder à tout type de fichiers, logiciels, extensions et contenus, sans aucune exception.
+# What does it allow you to do ?
+Winion: A Terminal Without Limits!
+Winion is much more than just a command interpreter. It includes an apt-like simulation, supports thousands of modules, and relies on external package providers to deliver unmatched power. It allows access to all types of files, software, extensions, and content—without any exceptions.
 
-Que ce soit pour installer des programmes, télécharger des fichiers, contourner des restrictions ou explorer des bases de données externes, Winion offre un accès total et illimité à un écosystème gigantesque. 🚀
+Whether it's to install programs, download files, bypass restrictions, or explore external databases, Winion provides full and unlimited access to a vast ecosystem. 🚀
 
 
-## 📸 Aperçu
+## 📸 Preview
 ![Terminal Screenshot](media/1.png)
 # Video 
 [![Aperçu vidéo](media/1.png)](https://www.youtube.com/watch?v=Q90Vv5hll6k)
 
-# Gestionnaire de Paquets.
-Par défaut, Winion utilise [WinionSourceAPT](https://github.com/JuanForge/WinionSourceAPT) comme catalogue principal pour la gestion de paquets. Cela permet d’accéder à une vaste collection de logiciels, extensions et outils, tout en facilitant l'installation et la mise à jour des paquets directement depuis le terminal.
+# Package Manager.
+By default, Winion uses [WinionSourceAPT](https://github.com/JuanForge/WinionSourceAPT) as the primary repository for package management. This provides access to a wide collection of software, extensions, and tools, while making it easy to install and update packages directly from the terminal.
 
 
 # 1 - 💻 Installation
@@ -126,7 +126,7 @@ Download the latest version [**here**](https://github.com/JuanForge/Winion/relea
 [![How to install Winion (installer) and module Ntop!](https://img.youtube.com/vi/dEWdlBmZ1_o/0.jpg)](https://www.youtube.com/watch?v=dEWdlBmZ1_o)
 
 
-## 🛠 Installation alternative (sources Git)
+## 🛠 Alternative Installation (Git Sources)
 ⚠️ Reserved for developers or contributors.
 Allows access to the development version (may contain bugs).
 ```bash
@@ -209,37 +209,48 @@ help
 ### Voicie les commandes de base :
 
 ####  Module :
+
+Show software information.
+```sh
+version
+```
+
+Update the software.
+```sh
+update
+```
+
 Search for a package by name or description.
 ```sh
 apt search <name>
 ```
 
-Mettre à jour les fichiers d’index des dépôts.
+Update the repository index files.
 ```sh
 apt update
 ```
 
-Installer un paquet.
+Install a package.
 ```sh
 apt install <module>
 ```
 
-Supprimer un paquet.
+Remove a package.
 ```sh
 apt remove <module>
 ```
 
-Mettre a jour les paquets.
+Upgrade the packages.
 ```sh
 apt upgrade
 ```
 
-Mettre a jour le paquet.
+Upgrade the package.
 ```sh
 apt upgrade <module>
 ```
 
-Test complet sur l'entièreté des paquet (Trouver la moindre erreur). ⚠️ ( Plus disponible ) ⚠️
+Full test on all packages (Catch the smallest error). ⚠️ ( Plus disponible ) ⚠️
 ```sh
 check integrity
 ```
@@ -256,29 +267,19 @@ Forces pending changes to be written to disk, updating logs and other temporary 
 flush
 ```
 
-Afficher l'historique des commandes.
+Display command history.
 ```sh
 history
 ```
 
-Permet d'injecter du code python directement dans le programme.
+Allows injecting Python code directly into the program.
 ```sh
 inject:<code>
 ```
 
-Purger le système (Vide temp et le Cache). ⚠️ ( Non disponible ) ⚠️
+Clean the system (Clear temp files and cache). ⚠️ ( Non disponible ) ⚠️
 ```sh
 purge
-```
-
-Mets a jour le Software. ⚠️ ( Non disponible ) ⚠️
-```sh
-sys:update
-```
-
-Afficher les information du Software. ⚠️ ( Non disponible ) ⚠️
-```sh
-sys:version
 ```
 
 ## 🚀 Optimisation
@@ -327,23 +328,23 @@ Pour l’instant, Winion est privé. Il deviendra open source lorsque la communa
 Winion deviendra open source dès que nous aurons une base solide d’utilisateurs et de contributeurs. Nous souhaitons d’abord assurer une version stable et robuste avant de permettre à la communauté de participer pleinement au développement.
 
 ### 🛠️ 3 - amélioration.
-#### 3.0 - Puis-je suggérer des améliorations ou signaler des bugs ?
+#### 3.0 - Can I suggest improvements or report bugs ?
 
-Oui ! Une plateforme de feedback sera mise en place pour permettre aux utilisateurs de proposer des idées et d’aider à l’amélioration du projet.
+Yes! A feedback platform will be set up to allow users to propose ideas and help improve the project.
 
-### 🛡️ 4 - sécurité.
+### 🛡️ 4 - security.
 
-#### 4.0 - Est-ce que Winion remplace l'invite de commandes ou PowerShell ?
+#### 4.0 - Does Winion replace the Command Prompt or PowerShell ?
 
-Non, Winion ne remplace pas l'invite de commandes ou PowerShell. Il s'agit plutôt d'un complément qui permet d'exécuter des commandes Linux adaptées à Windows pour une utilisation plus rapide et simplifiée, tout en restant compatible avec les outils natifs de Windows.
+No, Winion does not replace the Command Prompt or PowerShell. It is rather a complementary tool that allows you to run Linux commands adapted for Windows for faster and simpler use, while remaining compatible with native Windows tools.
 
 #### 4.1 - Winion est-il sécurisé à utiliser ?
 Oui, Winion est conçu avec la sécurité en tête. Cependant, comme pour tout programme qui interagit avec votre système, il est important de toujours vérifier les sources et de faire preuve de prudence lors de l’utilisation de commandes puissantes. Il est fortement recommandé de ne pas ajouter de sources inconnues dans le gestionnaire de paquets, afin d'éviter d'exécuter des commandes ou d'installer des logiciels potentiellement malveillants.
 
 ### 🌐 5 - Support Multilingue.
 
-#### 🌍 5.0 - Support Multilingue à Venir ?
-Les traductions dans d’autres langues seront ajoutées plus tard, soit par traduction automatique, soit par la contribution de bénévoles. Restez à l’affût des mises à jour !
+#### 🌍 5.0 - Multilingual Support Coming Soon ?
+Translations into other languages will be added later, either via automatic translation or through volunteer contributions. Stay tuned for updates!
 
 #### 🗣️ 5.1 - Langues Prévues
 
