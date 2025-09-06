@@ -97,6 +97,8 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 
 ### 4: Winion starts in your system’s language, with no additional configuration needed. If it doesn't, check [**here**](#-Translation).
 
+### 5: Expected release between September 6–20, fully open source.
+
 # 🔒 Actuellement Privé, Bientôt Open Source
 Winion est pour l’instant un projet privé, mais une fois qu’il aura une communauté assez grande, il passera en open source pour que chacun puisse contribuer et l’améliorer.
 
