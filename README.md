@@ -21,11 +21,11 @@
 
 
 
-# 🇫🇷 Un Projet 100% Français, et j'en suis extrêmement fier !
+# 🇫🇷 A 100% French project, and I am extremely proud of it!
 
-Winion est un projet conçu et développé en France, avec passion et enthousiasme. Il s'agit d'un interpréteur de commandes avancé qui apporte l’expérience Linux sur Windows, avec des commandes modifiées et optimisées.
+Winion is a project designed and developed in France, with passion and enthusiasm. It is an advanced command interpreter that brings the Linux experience to Windows, with modified and optimized commands
 
-L’objectif de Winion est de rendre l’utilisation des commandes plus rapide, sans recherches complexes, tout en étant accessible aux nouveaux utilisateurs et puissant pour les plus expérimentés. Je suis extrêmement fier de ce travail et ravi de le partager avec la communauté.
+The goal of Winion is to make command usage faster, without complex searches, while being accessible to new users and powerful for more experienced ones. I am extremely proud of this work and thrilled to share it with the community.
 
 
 ## 📜 Licence
@@ -125,8 +125,8 @@ Download the latest version [**here**](https://github.com/JuanForge/Winion/relea
 
 
 ## 🛠 Installation alternative (sources Git)
-⚠️ Réservée aux développeurs ou contributeurs.
-Permet d’obtenir la version en cours de développement (peut contenir des bugs).
+⚠️ Reserved for developers or contributors.
+Allows access to the development version (may contain bugs).
 ```bash
   git clone https://github.com/JuanForge/Winion.git
   cd Winion
@@ -186,11 +186,11 @@ In this case, there is no automatic solution: you can either request it to be ad
 
 
 
-# Mes recommandations de modules pour votre protection.
+# My recommended modules for your protection.
 |      nom      |   taille   | description |
 |---------------|------------|-------------|
-| VeraCrypt     |   45.5 Mo  |Logiciel qui chiffre vos fichiers et disques pour les protéger par mot de passe.|
-| GetSession    |   433 Mo   |Une messagerie sécurisée qui chiffre vos messages et protège votre anonymat, sans numéro ni e-mail.|
+| VeraCrypt     |   45.5 Mo  |Software that encrypts your files and drives to protect them with a password.|
+| GetSession    |   433 Mo   |A secure messaging service that encrypts your messages and protects your anonymity, without requiring a phone number or email (end-to-end).|
 
 
 
@@ -207,6 +207,11 @@ help
 ### Voicie les commandes de base :
 
 ####  Module :
+Search for a package by name or description.
+```sh
+apt search <name>
+```
+
 Mettre à jour les fichiers d’index des dépôts.
 ```sh
 apt update
@@ -242,7 +247,12 @@ Proposse tous les paquets installable, le tous en une interface CLI. ⚠️ ( Pl
 apt install --CLI
 ```
 
-####  Autre :
+####  Other :
+
+Forces pending changes to be written to disk, updating logs and other temporary buffers.
+```sh
+flush
+```
 
 Afficher l'historique des commandes.
 ```sh
@@ -301,9 +311,9 @@ inject:with Cache.lock: Cache.cache = {}
 
 ### ⚙️ 1 - OS.
 
-#### 1.0 - Winion est-il compatible avec tous les systèmes d'exploitation ?
+#### 1.0 - Is Winion compatible with all operating systems?
 
-Winion est actuellement conçu pour Windows (développé principalement sur Windows 10 x64). Il est prévu de créer une version compatible avec Linux dans un futur.
+Winion is currently designed for Windows (mainly developed on Windows 10 x64). A Linux-compatible version is planned for the future.
 
 
 ### 🤝 2 - Open Source.
@@ -352,7 +362,7 @@ Les traductions dans d’autres langues seront ajoutées plus tard, soit par tra
 |  Portugais |  ✅  |    ❌    |         🤖         |
 |  Hébreu    |  ❌  |    ❌    |
 
-D'autres langues pourront être ajoutées en fonction des contributions et des demandes de la communauté ! 🌍✨
+Other languages may be added based on community contributions and requests! 🌍✨
 ## Auteurs
 
 - [@WinionByJuan](https://www.tiktok.com/@winionbyjuan)
@@ -365,7 +375,7 @@ If you enjoy Winion and would like to support its development, you can make a do
 **XMR Address :** `8B5au9xKX7u9jcQvaA56xW1AwmxPC7tAwFW5pKSVw9xaPi5tMxqh5YD5Zb89oYKkCc42SsDi9G2XFAbaZfrTDNJ7B8pMYgT`
 <img src="media/Monero.png" alt="MoneroICO" width="300">
 
-Merci pour votre soutien ! 🙏
+Thank you for your support! 🙏
 
 ## Download Releases
 | Version     |      Build     |PyVersion|   Date   | Lien |
