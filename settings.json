@@ -1,0 +1,70 @@
+{
+  "__comment": "clé possible : Version = {version} | Build = {build} | ReleaseType = {ReleaseType}, DEV",
+  "Version": "{version}",
+  "Build": "{build}",
+  "ReleaseType": "DEV",
+  "MBoot": false,
+  "trayservice": true,
+
+
+  "TraceInjector": {
+    "DEBUG": {
+      "enable": false,
+      "TypeJSON": 4,
+      "exclude_stdlib": true,
+      "addExecute": true,
+      "addCodeObject": false,
+      "addFilename": true,
+      "addGlobalsState": false,
+      "addLocalsState": true
+    },
+
+    "Injector": {
+      "enable": false
+    }
+  },
+
+
+  "Cache": {
+    "use": true,
+    "MaxSize": 2500000000,
+    "MaxiTimeHour": 5
+  },
+
+
+  "apt": {
+    "source": [
+        "https://github.com/JuanForge/WinionSourceAPT/raw/refs/heads/main/NewGen.json"
+      ]
+  },
+
+
+  "torrent": {
+    "use": false,
+    "Software": "qbittorrent",
+    "host": "http://{localIP}:8855",
+    "username": "admin",
+    "password": "123456789"
+  },
+
+
+  "requests": {
+    "__comment": "Mettre `false` pour ne pas utiliser de proxy, et a l'inverse mettre : `{localIP}:9050`",
+    "User-Agent": "Winion/{version}",
+    "proxy": false,
+    "cookie": [
+      ["www.example.com", "Terminal-Winion", "33643162116901"]
+    ]
+  },
+
+
+  "Thread": {
+    "ThreadPoolExecutor": 20
+  },
+
+  "xmrAddress": "8B5au9xKX7u9jcQvaA56xW1AwmxPC7tAwFW5pKSVw9xaPi5tMxqh5YD5Zb89oYKkCc42SsDi9G2XFAbaZfrTDNJ7B8pMYgT",
+
+
+  "LICENSEagree": false,
+  "Booted": false
+}

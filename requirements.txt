@@ -1,0 +1,23 @@
+# --------- ERROR : wheel
+wheel
+# ---------
+miniupnpc==2.3.3
+natsort==8.4.0
+notify-py==0.3.43
+prompt_toolkit==3.0.51
+polib==1.2.0
+py7zr==1.0.0 # licence
+pyfiglet==1.0.4
+pygetwindow==0.0.9
+pympler==1.1
+pyperclip==1.9.0
+pystray==0.19.5 # licence
+python-magic-bin==0.4.14
+pywin32==311
+rapidfuzz==3.12.1
+requests==2.32.5
+rich==14.1.0
+tqdm==4.67.1
+windows-curses==2.4.1
+yaspin==3.1.0
+# ---------
