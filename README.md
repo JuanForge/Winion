@@ -387,7 +387,7 @@ Thank you for your support! 🙏
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=JuanForge/Winion&type=Date)](https://www.star-history.com/#JuanForge/Winion&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=JuanForge/Winion&type=Date&cache=20250907)](https://www.star-history.com/#JuanForge/Winion&Date)
 
 # 🛡️ Clause de non-responsabilité (Disclaimer)
 Ce logiciel est fourni "tel quel", sans aucune garantie explicite ou implicite, y compris mais sans s’y limiter, les garanties de qualité marchande, d’adéquation à un usage particulier, ou d’absence de virus, de comportements indésirables ou de dommages indirects.
