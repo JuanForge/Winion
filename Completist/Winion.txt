@@ -1,0 +1,15 @@
+apt install
+history
+apt update
+apt upgrade
+apt remove
+check integrity
+PATH:
+MBoot Install
+REBOOT
+injection:
+EXIT
+HELP
+OS:
+#    ----  EmuUNIX.py  ----
+clear

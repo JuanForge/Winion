@@ -1,0 +1,1391 @@
+#----------------WORDS----------------
+True
+False
+Yes
+No
+And
+Or
+Not
+If
+Then
+Else
+However
+Therefore
+Because
+Although
+Before
+After
+When
+While
+Until
+Unless
+Where
+How
+Why
+What
+Which
+Who
+Whom
+This
+That
+These
+Those
+Each
+All
+Some
+Many
+Few
+Several
+One
+Two
+Three
+Four
+Five
+More
+Less
+Better
+Worse
+Higher
+Lower
+First
+Last
+Next
+Previous
+Here
+There
+Anywhere
+Everywhere
+Now
+Later
+Soon
+Earlier
+Always
+Never
+Sometimes
+Often
+Rarely
+Usually
+Constantly
+Once
+Twice
+Multiple
+Additional
+Important
+Necessary
+Possible
+Impossible
+Available
+Unavailable
+Correct
+Incorrect
+Equal
+Unequal
+Significant
+Insignificant
+Clear
+Unclear
+Visible
+Invisible
+Obvious
+Not obvious
+Straightforward
+Complex
+Simple
+Complicated
+Easy
+Hard
+Difficult
+Fast
+Slow
+Quick
+Long
+Short
+Large
+Small
+Big
+Tiny
+Wide
+Narrow
+Deep
+Shallow
+Hot
+Cold
+Warm
+Cool
+Dry
+Wet
+Rich
+Poor
+Expensive
+Cheap
+Light
+Heavy
+Strong
+Weak
+Clean
+Dirty
+New
+Old
+Recent
+Ancient
+Future
+Past
+Present
+Near
+Far
+Different
+Same
+Similar
+Opposite
+Together
+Apart
+Along
+Across
+Around
+Through
+Between
+Outside
+Inside
+Above
+Below
+Under
+Over
+On
+Off
+At
+In
+To
+From
+By
+With
+Without
+Against
+For
+During
+Before
+After
+While
+As
+Like
+Unlike
+Because
+Due to
+So
+In order to
+Despite
+Although
+Though
+Whereas
+Otherwise
+However
+Therefore
+Thus
+In addition
+Furthermore
+Moreover
+Consequently
+As a result
+For example
+In particular
+Such as
+Including
+Excluding
+Except
+Including
+Notwithstanding
+Based on
+According to
+In conclusion
+Finally
+Ultimately
+Firstly
+Secondly
+Next
+Then
+Lastly
+Simultaneously
+Subsequently
+Meanwhile
+Additionally
+Furthermore
+Consequently
+Alternatively
+Otherwise
+Not only
+But also
+Either
+Neither
+Any
+None
+Both
+Each
+All
+Some
+Few
+Several
+Many
+Much
+Less
+More
+Most
+Least
+One
+Two
+Three
+Four
+Five
+Ten
+Hundred
+Thousand
+Million
+Billion
+#----------------MODULE----------------
+apache2
+nginx
+mysql-server
+php
+php-mysql
+curl
+vim
+git
+docker.io
+nodejs
+npm
+python3
+python3-pip
+python3-venv
+gcc
+g++
+make
+build-essential
+cmake
+libssl-dev
+openssl
+postgresql
+postgresql-contrib
+mongodb
+redis-server
+memcached
+ufw
+fail2ban
+rsync
+htop
+tmux
+screen
+zsh
+fish
+bzip2
+gzip
+tar
+unzip
+zip
+lsof
+strace
+tcpdump
+net-tools
+nmap
+traceroute
+iftop
+dnsutils
+bind9
+bind9-utils
+openvpn
+wireguard
+qemu
+libvirt-clients
+libvirt-daemon-system
+virt-manager
+gnupg
+gpg
+gnome-terminal
+xterm
+rxvt-unicode
+openjdk-11-jdk
+maven
+gradle
+sqlite3
+sqlite
+jq
+yq
+tree
+bc
+neofetch
+glances
+mosh
+autossh
+libcurl4
+libcurl4-openssl-dev
+libxml2
+libxml2-dev
+libxslt1-dev
+libjpeg-dev
+libpng-dev
+libtiff-dev
+imagemagick
+ffmpeg
+vlc
+mpv
+youtube-dl
+handbrake-cli
+gimp
+inkscape
+blender
+audacity
+wine
+playonlinux
+transmission-cli
+aria2
+tor
+torbrowser-launcher
+hexchat
+irssi
+weechat
+elinks
+lynx
+links
+rtorrent
+httrack
+aria2
+curlftpfs
+sshfs
+rsnapshot
+duplicity
+borgbackup
+rclone
+exfat-utils
+ntfs-3g
+fuse
+gparted
+fdisk
+parted
+xfsprogs
+btrfs-progs
+cryptsetup
+lvm2
+mdadm
+zfsutils-linux
+isc-dhcp-server
+dnsmasq
+openvswitch-switch
+bridge-utils
+iptables
+iproute2
+firewalld
+squid
+tinyproxy
+privoxy
+ngrep
+etherape
+iftop
+vnstat
+vnstati
+darkstat
+tcpstat
+iperf3
+iperf
+ss
+arp-scan
+arping
+ethtool
+iw
+aircrack-ng
+reaver
+kismet
+tshark
+wireshark
+radare2
+gdb
+valgrind
+strace
+ltrace
+perf
+bpfcc-tools
+bcc
+sysstat
+iotop
+iftop
+htop
+nload
+dstat
+vmstat
+watch
+screenfetch
+speedtest-cli
+iputils-ping
+inetutils-ping
+netcat
+socat
+telnet
+dnsutils
+bind9-host
+whois
+hostname
+nmcli
+network-manager
+modemmanager
+wvdial
+usb-modeswitch
+openssh-server
+openssh-client
+sshpass
+rssh
+dropbear
+mosh
+nfs-kernel-server
+nfs-common
+samba
+cifs-utils
+autofs
+nslcd
+ldap-utils
+libnss-ldap
+krb5-user
+libpam-krb5
+krb5-config
+libpam-google-authenticator
+xrdp
+vnc4server
+tigervnc-standalone-server
+spice-vdagent
+freeipa-client
+samba-common
+openldap-utils
+sssd
+apache2-utils
+curl
+wget
+curlftpfs
+ftp
+tftp
+vsftpd
+proftpd-basic
+pure-ftpd
+mysql-client
+mysql-server
+mariadb-server
+sqlite
+sqlite3
+postgresql-client
+postgresql-server
+postgresql-contrib
+mongodb-org
+redis-tools
+redis-server
+mongodb-server
+mariadb-client
+nginx
+nginx-extras
+nginx-light
+apache2
+apache2-bin
+libapache2-mod-php
+php-fpm
+php-cli
+php-cgi
+php-common
+php-mysql
+php-pgsql
+php-sqlite3
+php-curl
+php-json
+php-xml
+php-mbstring
+php-zip
+php-intl
+php-gd
+php-imagick
+php-bcmath
+php-soap
+php-ldap
+php-redis
+php-apcu
+php-pear
+php-xmlrpc
+php-xdebug
+perl
+python3-pip
+ruby
+ruby-dev
+python3-virtualenv
+nodejs
+npm
+yarn
+grunt
+gulp
+bower
+pnpm
+docker-ce
+docker-compose
+kubectl
+minikube
+helm
+terraform
+packer
+vagrant
+ansible
+puppet
+chef
+saltstack
+rundeck
+jenkins
+git
+subversion
+mercurial
+bazaar
+cvs
+libgit2-dev
+libsvn-dev
+libcurl4-gnutls-dev
+libcurl4-nss-dev
+libcurl4-openssl-dev
+libssl-dev
+libgmp-dev
+libmpfr-dev
+libmpc-dev
+libcloog-isl-dev
+libisl-dev
+libevent-dev
+libgcrypt20-dev
+libgnutls28-dev
+libffi-dev
+libglib2.0-dev
+libgdbm-dev
+libncurses5-dev
+libncursesw5-dev
+libreadline-dev
+liblzma-dev
+libbz2-dev
+libsqlite3-dev
+libxml2-dev
+libxslt1-dev
+libyaml-dev
+libzip-dev
+libjpeg-dev
+libpng-dev
+libtiff-dev
+libgdk-pixbuf2.0-dev
+libmagickwand-dev
+libsdl2-dev
+libgtk2.0-dev
+libgtk-3-dev
+libsdl2-image-dev
+libsdl2-mixer-dev
+libvorbis-dev
+libogg-dev
+libopus-dev
+libmp3lame-dev
+libx264-dev
+libx265-dev
+libvpx-dev
+libfdk-aac-dev
+libass-dev
+libfreetype6-dev
+libharfbuzz-dev
+libfontconfig1-dev
+libfribidi-dev
+libsoxr-dev
+libopenal-dev
+libvulkan-dev
+libwayland-dev
+libx11-dev
+libxext-dev
+libxrandr-dev
+libxi-dev
+libxcomposite-dev
+libxfixes-dev
+libxcursor-dev
+libxdamage-dev
+libxinerama-dev
+libxkbfile-dev
+libxmu-dev
+libxpm-dev
+libxt-dev
+libxvmc-dev
+libdrm-dev
+libudev-dev
+libinput-dev
+libudev-dev
+libusb-1.0-0-dev
+libevdev-dev
+libmtdev-dev
+libwayland-dev
+libweston-6-dev
+libgbm-dev
+libegl1-mesa-dev
+libgles2-mesa-dev
+libosmesa6-dev
+libvdpau-dev
+libva-dev
+mesa-common-dev
+mesa-utils
+mesa-utils-extra
+nvidia-driver
+nvidia-settings
+cuda
+cudnn
+opencl-headers
+ocl-icd-libopencl1
+ocl-icd-opencl-dev
+clinfo
+amd-opencl-dev
+mesa-opencl-icd
+intel-opencl-icd
+beignet
+darktable
+digikam
+kdenlive
+kdeconnect
+konsole
+okular
+gwenview
+kate
+kdiff3
+krita
+gimp
+inkscape
+blender
+audacity
+build-essential
+curl
+git
+vim
+wget
+htop
+net-tools
+ufw
+nginx
+apache2
+mysql-server
+postgresql
+python3
+python3-pip
+nodejs
+npm
+php
+php-cli
+php-mbstring
+php-xml
+php-mysql
+openjdk-11-jdk
+gcc
+g++
+make
+cmake
+docker.io
+docker-compose
+libssl-dev
+zlib1g-dev
+libreadline-dev
+libsqlite3-dev
+libbz2-dev
+libncurses5-dev
+libncursesw5-dev
+libffi-dev
+liblzma-dev
+libxml2-dev
+libxmlsec1-dev
+xz-utils
+gnupg
+ca-certificates
+lsb-release
+fontconfig
+imagemagick
+ffmpeg
+openssh-server
+libc6
+perl
+jq
+tree
+nmap
+screen
+tmux
+traceroute
+dnsutils
+iptables
+iproute2
+telnet
+rsync
+policykit-1
+libcurl4
+pkg-config
+ncdu
+ufw
+apache2-utils
+php-json
+php-gd
+php-curl
+php-intl
+php-zip
+php-soap
+php-xmlrpc
+php-bcmath
+php-opcache
+php-readline
+php-pear
+php-common
+php-phpseclib
+default-jre
+default-jdk
+python-is-python3
+libgdbm-dev
+libexpat1-dev
+libdb-dev
+libpcap-dev
+libsasl2-dev
+libx11-dev
+libxext-dev
+libxtst-dev
+libxi-dev
+libxrender-dev
+libxt-dev
+libxmu-dev
+libxpm-dev
+libxft-dev
+libxinerama-dev
+libxkbfile-dev
+libxrandr-dev
+libxxf86vm-dev
+libgl1-mesa-dev
+libglu1-mesa-dev
+mesa-utils
+mesa-common-dev
+libglu1-mesa
+libgl1-mesa-glx
+alsa-utils
+pulseaudio
+mplayer
+mpv
+vlc
+gparted
+synaptic
+ubuntu-drivers-common
+software-properties-common
+ubuntu-restricted-extras
+virtualbox
+qemu
+virt-manager
+dnsmasq
+bridge-utils
+openvpn
+wireguard
+mariadb-server
+redis-server
+memcached
+mongodb
+r-base
+r-base-dev
+libjpeg-dev
+libpng-dev
+libtiff-dev
+libgif-dev
+libfreetype6-dev
+libx264-dev
+libx265-dev
+libvpx-dev
+libopus-dev
+librtmp-dev
+libsox-dev
+libfaac-dev
+libmp3lame-dev
+libsdl2-dev
+libboost-all-dev
+libgsl-dev
+libgtk-3-dev
+libqt5core5a
+libqt5gui5
+libqt5widgets5
+qt5-default
+libtbb-dev
+libeigen3-dev
+libfltk1.3-dev
+libglew-dev
+libsdl1.2-dev
+libncurses-dev
+libicu-dev
+libboost-system-dev
+libboost-filesystem-dev
+libboost-iostreams-dev
+libboost-program-options-dev
+libboost-thread-dev
+libssl-dev
+libevent-dev
+libsodium-dev
+libzmq3-dev
+libprotoc-dev
+protobuf-compiler
+cmake-curses-gui
+cmake-data
+doxygen
+graphviz
+plantuml
+texlive
+texlive-latex-extra
+texlive-fonts-recommended
+texlive-lang-all
+texlive-science
+texinfo
+dvipng
+pandoc
+lynx
+elinks
+w3m
+zathura
+okular
+evince
+texstudio
+kile
+latexmk
+rubygems
+ruby-full
+rails
+php-fpm
+php-sqlite3
+php-xdebug
+php-imagick
+php-ldap
+php-memcached
+php-redis
+libapache2-mod-php
+phpmyadmin
+php-cli
+php-xml
+php-mbstring
+php-gmp
+php-bz2
+php-gd
+php-imap
+php-mysql
+php-json
+php-tokenizer
+php-xmlrpc
+php-gettext
+php-intl
+php-apcu
+php-zip
+php-soap
+php7.4
+php7.4-common
+php7.4-cli
+php7.4-mbstring
+php7.4-xml
+php7.4-curl
+php7.4-zip
+php7.4-json
+php7.4-opcache
+php7.4-soap
+php7.4-readline
+php7.4-intl
+php7.4-bcmath
+php7.4-imagick
+php7.4-xmlrpc
+python3.8
+python3-venv
+python3-dev
+python3-setuptools
+python3-wheel
+python3-distutils
+python3-gi
+python3-tk
+python3-gi-cairo
+python3-gst-1.0
+python3-matplotlib
+python3-numpy
+python3-pandas
+python3-scipy
+python3-sklearn
+python3-sympy
+python3-statsmodels
+python3-pytest
+python3-pipx
+openjdk-8-jdk
+openjdk-14-jdk
+oracle-java8-installer
+oracle-java11-installer
+oracle-java14-installer
+oracle-java15-installer
+oracle-java16-installer
+oracle-java17-installer
+oracle-java18-installer
+oracle-java19-installer
+cuda-toolkit-11-0
+cuda-toolkit-11-1
+cuda-toolkit-11-2
+cuda-toolkit-11-3
+cuda-toolkit-11-4
+cuda-toolkit-11-5
+cuda-toolkit-11-6
+cuda-toolkit-11-7
+cuda-toolkit-11-8
+nvidia-cuda-toolkit
+nvidia-driver-450
+nvidia-driver-460
+nvidia-driver-465
+nvidia-driver-470
+nvidia-driver-495
+nvidia-driver-510
+nvidia-driver-520
+tensorflow
+pytorch
+keras
+scikit-learn
+mlpack
+libopencv-dev
+opencv-python
+opencv-python-headless
+openalpr
+tesseract-ocr
+libtesseract-dev
+ocrfeeder
+gocr
+cuneiform
+tesseract-ocr-eng
+libreoffice
+libreoffice-writer
+libreoffice-calc
+libreoffice-impress
+libreoffice-math
+libreoffice-draw
+libreoffice-base
+libreoffice-help
+libreoffice-l10n-fr
+gnome-tweaks
+gnome-shell-extensions
+gnome-control-center
+gnome-terminal
+gnome-software
+gnome-system-monitor
+gnome-disk-utility
+gnome-font-viewer
+gnome-screenshot
+gnome-sound-recorder
+gnome-sudoku
+gnome-weather
+gnome-music
+gnome-calendar
+gnome-clocks
+gnome-contacts
+gnome-todo
+gnome-photos
+gnome-calculator
+gnome-books
+gnome-boxes
+gnome-nettool
+gnome-documents
+gnome-logs
+gnome-color-manager
+gnome-shell-pomodoro
+gnome-keyring
+gimp
+inkscape
+kdenlive
+blender
+audacity
+darktable
+krita
+rawtherapee
+shotwell
+mypaint
+gthumb
+gphoto2
+photoflow
+enlightenment
+fluxbox
+openbox
+blackbox
+ratpoison
+twm
+icewm
+awesome
+i3
+sway
+xmonad
+herbstluftwm
+bspwm
+#----------------Package management----------------
+apt install
+apt update
+apt upgrade
+apt full-upgrade
+apt remove
+apt purge
+apt autoremove
+apt list
+apt show
+apt search
+apt-cache
+apt-cache search
+apt-cache show
+apt-get
+apt-get install
+apt-get update
+apt-get upgrade
+apt-get dist-upgrade
+apt-get remove
+apt-get purge
+apt-get autoremove
+apt-get clean
+apt-get autoclean
+dpkg
+dpkg -i
+dpkg -r
+dpkg --configure
+dpkg -l
+dpkg -S
+dpkg-query
+yum
+yum install
+yum update
+yum upgrade
+yum remove
+yum search
+yum list
+yum info
+yum clean
+rpm
+rpm -i
+rpm -e
+rpm -U
+rpm -q
+rpm -qa
+rpm -qi
+rpm -ql
+rpm -V
+pacman
+pacman -S
+pacman -U
+pacman -R
+pacman -Sy
+pacman -Syu
+pacman -Qs
+pacman -Qi
+pacman -Q
+brew
+brew install
+brew update
+brew upgrade
+brew list
+brew search
+brew uninstall
+brew doctor
+brew cleanup
+#----------------AUTRE COMMANDE DE MERDE----------------
+# Compression - TAR, GZIP, BZIP2, ZIP
+tar
+tar -xvf
+tar -czvf
+tar -xzvf
+tar -cvf
+tar -tf
+tar -tvf
+tar -cf
+gzip
+gzip -d
+gunzip
+bzip2
+bzip2 -d
+bunzip2
+xz
+xz -d
+unxz
+zip
+zip -r
+unzip
+unzip -l
+unzip -o
+unzip -d
+7z
+7z x
+7z a
+7z t
+7z l
+# File searching and manipulation
+find
+find .
+find -name
+find -type
+find -exec
+find -print
+find -size
+find -user
+find -group
+find -perm
+grep
+grep -i
+grep -v
+grep -r
+grep -l
+grep -c
+grep -o
+grep -E
+grep -F
+egrep
+fgrep
+cut
+cut -d
+cut -f
+cut -c
+sort
+sort -n
+sort -r
+sort -u
+sort -k
+uniq
+uniq -c
+uniq -d
+uniq -u
+# File viewing and editing
+cat
+cat file.txt
+cat > file.txt
+cat >> file.txt
+less
+more
+more +N
+less +N
+less -N
+head
+head -n
+head -c
+tail
+tail -f
+tail -n
+tail -c
+head -n 10
+tail -n 10
+# System information
+ls
+ls -l
+ls -a
+ls -lh
+ls -la
+ls -lrt
+ls -R
+ls -1
+pwd
+whoami
+uname
+uname -a
+uname -r
+uptime
+top
+htop
+dmesg
+lscpu
+lsusb
+lspci
+df
+df -h
+free
+free -m
+# File permissions and ownership
+chmod
+chmod +x
+chmod -x
+chmod 755
+chmod 777
+chmod 644
+chmod -R
+chown
+chown user
+chown user:group
+chown -R
+chgrp
+chgrp group
+chgrp -R
+# Networking - IP, ifconfig, Netcat, OpenSSL
+ifconfig
+ifconfig eth0
+ifconfig -a
+ifconfig eth0 up
+ifconfig eth0 down
+ping
+ping google.com
+ping -c 4
+ping -i 0.2
+ping -s 56
+ping -a
+ip
+ip addr
+ip route
+ip link
+ip neigh
+ip netns
+netstat
+netstat -a
+netstat -tuln
+netstat -i
+netstat -s
+nmap
+nmap localhost
+nmap -p
+nmap -sP
+nmap -O
+nmap -sS
+curl
+curl -I
+curl -o
+curl -L
+curl -u
+curl -H
+curl --data
+curl --data-binary
+wget
+wget -O
+wget -c
+wget --no-check-certificate
+wget --limit-rate
+openssl
+openssl version
+openssl enc
+openssl genrsa
+openssl req
+openssl x509
+openssl s_client
+openssl s_server
+# Containerization and Virtualization - Docker
+docker
+docker run
+docker pull
+docker push
+docker build
+docker-compose
+docker ps
+docker images
+docker rm
+docker rmi
+docker exec
+docker stop
+docker start
+docker restart
+docker logs
+docker inspect
+docker network
+docker volume
+docker prune
+# Process management
+ps
+ps aux
+ps -ef
+top
+htop
+kill
+kill -9
+killall
+pkill
+bg
+fg
+jobs
+nice
+renice
+systemctl
+systemctl start
+systemctl stop
+systemctl restart
+systemctl status
+systemctl enable
+systemctl disable
+systemctl is-enabled
+# Disk and Filesystem - Mount, mkfs, fdisk
+mount
+mount -a
+mount -t
+umount
+umount -f
+lsblk
+blkid
+fdisk
+fdisk -l
+mkfs
+mkfs.ext4
+mkfs.xfs
+mkfs.ntfs
+df
+df -h
+du
+du -sh
+du -h
+du --max-depth
+fsck
+fsck -y
+# Text processing - awk, sed, tr
+awk
+awk '{print $1}'
+awk '{print $2}'
+awk -F
+sed
+sed 's/old/new/'
+sed -i
+sed -e
+tr
+tr -d
+tr -s
+paste
+cut -d
+cut -f
+# System control and monitoring
+shutdown
+shutdown -r now
+shutdown -h now
+shutdown -c
+reboot
+halt
+poweroff
+uptime
+who
+who -a
+w
+last
+lastb
+uptime -p
+uptime -s
+date
+date +%Y-%m-%d
+# Nginx
+nginx
+nginx -s reload
+nginx -s stop
+nginx -t
+nginx -v
+nginx -V
+nginx -h
+nginx -c
+nginx -g
+nginx -s
+nginx -q
+nginx -l
+nginx -D
+# Git
+git
+git clone
+git init
+git add
+git commit
+git push
+git pull
+git fetch
+git merge
+git branch
+git checkout
+git status
+git diff
+git log
+git reset
+git rebase
+git rm
+git tag
+git stash
+git apply
+# Miscellaneous utilities
+echo
+echo $PATH
+export
+export PATH
+alias
+unalias
+type
+which
+whereis
+locate
+updatedb
+history
+history -c
