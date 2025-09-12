@@ -1,0 +1,1 @@
+from .Hash import check_sha256
