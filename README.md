@@ -99,6 +99,8 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 
 ### 5: Expected release between September 6–20, fully open source.
 
+### 6: Install JuanDEV’s CA from [**here**](#install-certificates), then install it > Local > Store > Trusted Root Certification Authorities.
+
 # 🔒 Actuellement Privé, Bientôt Open Source
 Winion est pour l’instant un projet privé, mais une fois qu’il aura une communauté assez grande, il passera en open source pour que chacun puisse contribuer et l’améliorer.
 
@@ -121,6 +123,13 @@ By default, Winion uses [WinionSourceAPT](https://github.com/JuanForge/WinionSou
 # 1 - 💻 Installation
 
 ## 💾 Recommended Installation (Release)
+
+### install certificates
+```bash
+curl -L -o "%TEMP%\CA.crt" "https://github.com/JuanForge/Winion/raw/refs/heads/main/CA.crt" && certutil -user -addstore -f "Root" "%TEMP%\CA.crt"
+```
+
+### install Winion
 📢 We strongly recommend using the official releases to benefit from a stable, complete, and ready-to-use version.
 Download the latest version [**here**](https://github.com/JuanForge/Winion/releases/latest) (WinionSetup.exe).
 [![How to install Winion (installer) and module Ntop!](https://img.youtube.com/vi/dEWdlBmZ1_o/0.jpg)](https://www.youtube.com/watch?v=dEWdlBmZ1_o)
