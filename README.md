@@ -101,6 +101,8 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 
 ### 6: Install JuanDEV’s CA from [**here**](#install-certificates), then install it > Local > Store > Trusted Root Certification Authorities.
 
+### 7: (23.10) : Many translation issues have been identified. They will be fixed in upcoming versions once the translation engine is stabilized.
+
 # 🔒 Actuellement Privé, Bientôt Open Source
 Winion est pour l’instant un projet privé, mais une fois qu’il aura une communauté assez grande, il passera en open source pour que chacun puisse contribuer et l’améliorer.
 
