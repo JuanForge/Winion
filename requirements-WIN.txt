@@ -1,0 +1,4 @@
+python-magic-bin==0.4.14
+pywin32==311
+windows-curses==2.4.1
+-r requirements.txt
