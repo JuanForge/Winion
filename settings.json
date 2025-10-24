@@ -66,5 +66,11 @@
 
 
   "LICENSEagree": false,
-  "Booted": false
+  "Booted": false,
+
+  "api": {
+    "enable": false,
+    "port": 5421,
+    "host": "127.0.0.1"
+  }
 }
