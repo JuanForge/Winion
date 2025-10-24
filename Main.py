@@ -35,7 +35,6 @@ import platform
 import pyfiglet
 import requests
 import tempfile
-import win32api
 import miniupnpc
 import pyperclip
 import threading
@@ -76,6 +75,11 @@ from src.colorV2 import color as c
 from src.LinkManager import link2direct
 from src.importDynamic import importDynamic
 from src.sendnotification import sendnotification
+
+if platform.system() == "Windows":
+    import ctypes
+    import win32console # type: ignore
+    import win32api  # type: ignore
 
 time_load_module = time.monotonic_ns() - start_time
 
@@ -388,7 +392,7 @@ def main(session: dict):
         def Menu() -> str:
             sortie = []
             try:
-                import dearpygui.dearpygui as dpg
+                import dearpygui.dearpygui as dpg # type: ignore
                 SUPPORT_GUI = f"{c.VERT} {_('OUI')} {c.RESET}"
             except ImportError:
                 SUPPORT_GUI = f"{c.ROUGE[2]} {_('NON')} {c.RESET}"
@@ -514,7 +518,7 @@ def main(session: dict):
                         file = rep[1]
                 else:
                     try:
-                        import dearpygui.dearpygui as dpg
+                        import dearpygui.dearpygui as dpg # type: ignore
                         import tkinter as tk
                         from tkinter import filedialog
                         
@@ -605,9 +609,9 @@ def main(session: dict):
                 print(_("Et au cas où, la voici en bas."))
                 print(configJson['xmrAddress'])
                 try:
-                    import dearpygui.dearpygui as dpg
-                    import qrcode
-                    import dearpygui.dearpygui as dpg
+                    import dearpygui.dearpygui as dpg # type: ignore
+                    import qrcode # type: ignore
+                    import dearpygui.dearpygui as dpg # type: ignore
                     from PIL import Image
                     
                     img = qrcode.make(configJson['xmrAddress']).convert("RGBA")

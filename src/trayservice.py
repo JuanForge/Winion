@@ -18,7 +18,7 @@ from src.i18n import _
 
 if platform.system() == "Windows":
     import ctypes
-    import win32console
+    import win32console # type: ignore
 
 
 if platform.system() == "Windows":
