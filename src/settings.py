@@ -5,7 +5,7 @@ import re
 import json
 import socket
 
-
+from src.i18n import _
 from src.VERSION import VERSION
 
 class settings:
@@ -15,7 +15,7 @@ class settings:
 
         class KeyUnknown(SettingsError):
             def __init__(self, key):
-                super().__init__(f"[settings] Clé inconnue : '{key}'")
+                super().__init__(_("[settings] Clé inconnue : ") + str(key))
 
     @staticmethod
     def load():

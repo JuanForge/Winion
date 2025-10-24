@@ -103,11 +103,11 @@ class apt:
             """)
             
             result = button_dialog(
-                title=ANSI(f"{c.ROUGE[0]} WARNING {c.RESET}"),
+                title=ANSI(f"{c.ROUGE[0]} {_('AVERTISSEMENT')} {c.RESET}"),
                 text=license_text,
                 buttons=[
-                    ("✘ Refusé", False),
-                    ("✔ Continuer", True),
+                    (_("✘ Refusé"), False),
+                    (_("✔ Continuer"), True),
                 ]
             ).run()
             return result
@@ -319,7 +319,7 @@ class apt:
                     
                     print(f"[{module['name']}] Dependency : ", end='')
                     if module['dependency']:                                                      #--------  dependency  --------
-                        print("OUI")
+                        print(_("OUI"))
                         for i in module['dependency']:
                             if '==' in i:
                                 name, version = i.split('==', 1)
@@ -327,7 +327,7 @@ class apt:
                             else:
                                 self.install(name, version=None, sessionAPT=self, reinstall=reinstall)
                     else:
-                        print("NON")
+                        print(_("NON"))
                     
                         if 'InstallOptimizer' in globals():
                             if InstallOptimizer.version() == '0.001': # type: ignore
