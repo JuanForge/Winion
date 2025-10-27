@@ -43,6 +43,8 @@ import types
 
 class errors:
     class InvalidEntrySource(Exception): pass
+    class NotFound7zip(Exception): pass
+    class ModuleTypeUnknown(Exception): pass
 
 class apt:
     @staticmethod
@@ -366,7 +368,7 @@ class apt:
                                 elif module['type'] == 3:
                                     out = open(f"{tempDir}\\{module['name']}=={module['version']}.exe", "wb")
                                 else:
-                                    raise "INVALIDE TYPE x0"
+                                    raise errors.ModuleTypeUnknown(str(module['type']))
                                 
                                 SHA256 = hashlib.sha256()
                                 try:
