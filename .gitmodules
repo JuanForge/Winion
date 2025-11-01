@@ -1,0 +1,3 @@
+[submodule "Lib/Cache"]
+	path = Lib/Cache
+	url = https://github.com/JuanForge/Cache.git
