@@ -143,6 +143,7 @@ Allows access to the development version (may contain bugs).
 ```bash
   git clone https://github.com/JuanForge/Winion.git
   cd Winion
+  git submodule update --init --recursive
   pip install -r requirements.txt
   python Main.py --boot
 ```
