@@ -103,6 +103,8 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 
 ### 7: (23.10) : Many translation issues have been identified. They will be fixed in upcoming versions once the translation engine is stabilized.
 
+### 8: (07.11) : Winion is completely open source: the GitHub repository is public, with the full source code accessible via git clone, under the CC BY-NC-ND 4.0 license. I must clarify this, as it is due to the fact that the documentation is outdated and may have caused some confusion.
+
 # 🔒 Actuellement Privé, Bientôt Open Source
 Winion est pour l’instant un projet privé, mais une fois qu’il aura une communauté assez grande, il passera en open source pour que chacun puisse contribuer et l’améliorer.
 
