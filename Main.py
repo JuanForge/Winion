@@ -309,7 +309,7 @@ def main(session: dict):
         repetitions = 4
         durations = []
         print(_("Exécution du benchmark..."))
-        for _ in range(repetitions):
+        for i in range(repetitions):
             start = time.perf_counter()
             for i in range(n): # 256 * 256 * 256 * 24
                 nombre1 = int(str(random.randint(1, 9)) + ''.join(str(random.randint(0, 9)) for _ in range(255)))
@@ -653,20 +653,39 @@ def main(session: dict):
                 continue
             
             elif rep[:6].lower() == "start ":
-                module = rep[6:].strip()
+                arguments = shlex.split(rep[6:].strip(), posix=True)
+                module = arguments[0]
+                del arguments[0]
                 Racine = f"{os.path.join(os.getcwd(), 'Module', module)}"
-                
-                py = os.path.join(Racine, '__Main__.py')
-                if os.path.isfile(py):
-                    with yaspin(spinner=spinners.Spinners.material, text=_("Process en cours..."), color="red", timer=True) as e:
-                        CREATE_NEW_CONSOLE = 0x00000010
-                        
-                        proc = subprocess.Popen([sys.executable, py], creationflags=CREATE_NEW_CONSOLE)
-                        while proc.poll() is None:
-                            time.sleep(1)
-                        else:
-                            e.write(f"Process terminé avec le code : {proc.poll()}")
-                    continue
+                print(Racine)
+                if os.path.isdir(Racine):
+                    version = json.loads(open(os.path.join(Racine, "index.json")).read())["lastVersion"]
+                    
+                    py = os.path.join(Racine, version, 'main.py')
+                    cmd = shlex.join([sys.executable, py] + arguments)
+    
+                    print(cmd)
+                    
+                    if os.path.isfile(py):
+                        with yaspin(spinner=spinners.Spinners.material, text=_("Process en cours..."), color="red", timer=True) as e:
+                            if platform.system() == "Linux":
+                                proc = subprocess.Popen([
+                                    "gnome-terminal", 
+                                    "--", 
+                                    "bash", 
+                                    "-c", 
+                                    cmd + "; exec bash"
+                                ], cwd=os.path.join(Racine, version))
+                            elif platform.system() == "Windows":
+                                CREATE_NEW_CONSOLE = 0x00000010
+                                proc = subprocess.Popen([cmd], creationflags=CREATE_NEW_CONSOLE, cwd=os.path.join(Racine, version))
+                            else:
+                                raise "668"
+                            while proc.poll() is None:
+                                time.sleep(1)
+                            else:
+                                e.write(_(f"Process terminé avec le code : ") + str(proc.poll()))
+                        continue
                 """
                 module = rep[6:].strip()
                 Racine = f"{ROOT}\\Module"

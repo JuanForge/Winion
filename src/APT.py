@@ -464,6 +464,9 @@ class apt:
                                         self._addPath(outModule)
                                         for i in module["addPath"]:
                                             self._addPath(os.path.join(outModule, i))
+                                        
+                                        with open(os.path.join("Module", module['name'], "index.json"), "w") as f:
+                                            f.write(json.dumps({"lastVersion": module["version"]}))
                                     else:
                                         print(f"{ROUGE[0]}ERROR{RESET}")
                                         return False
