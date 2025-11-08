@@ -20,14 +20,14 @@ def input_():
                 ligne_total_history += 1
     ligne_total_history -= 1
     
-    if os.path.isdir("Completist\\commande.txt"):
-        with open("Completist\\commande.txt", "r", encoding="utf-8") as fichier:
+    if os.path.isdir(os.path.join("Completist", "commande.txt")):
+        with open(os.path.join("Completist", "commande.txt"), "r", encoding="utf-8") as fichier:
             COMMANDS = [ligne.strip() for ligne in fichier if ligne.strip() and not ligne.startswith("#")]
     else:
         COMMANDS = []
     
-    if os.path.isdir("Completist\\module.txt"):
-        with open("Completist\\module.txt", "r", encoding="utf-8") as fichier:
+    if os.path.isdir(os.path.join("Completist", "module.txt")):
+        with open(os.path.join("Completist", "module.txt"), "r", encoding="utf-8") as fichier:
             COMMANDS_module = [ligne.strip() for ligne in fichier if ligne.strip() and not ligne.startswith("#")]
     else:
         COMMANDS_module = []
