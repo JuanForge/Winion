@@ -28,12 +28,12 @@ def check_sha256(demande, file_SHA256="checksums.sha256", log: Debug.log.session
         log.add("Stop")
         return rep
     elif os.path.isdir(demande):
-        with open(demande + "\\" + file_SHA256, 'r') as fichier:
+        with open(os.path.join(demande, file_SHA256), 'r') as fichier:
             for ligne in fichier:
                 ligne = ligne.strip()
                 hash = ligne[:64]
                 file = ligne[65:].replace("*", "")
-                file = demande + "\\" + file
+                file = os.path.join(demande, file)
                 if os.path.isfile(file):
                     rep = check_unit_SHA256(file)
                     if rep == hash:
