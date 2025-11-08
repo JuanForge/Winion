@@ -641,7 +641,8 @@ def main(session: dict):
                     dpg.destroy_context()
                 except ImportError:
                     pass
-                os.startfile(f"monero:{configJson['xmrAddress']}")
+                if platform.system() == "Windows":
+                    os.startfile(f"monero:{configJson['xmrAddress']}")
                 continue
             
             elif rep[:10] == "apt update":
