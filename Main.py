@@ -229,8 +229,9 @@ def main(session: dict):
     session['requests'] = requests.Session()
     #session['requests'].verify = False
     #session['requests'].options(timeout=(10, 20), verify=False)
-    
-    session['log'] = NewLog.session(open(f'Logs\\{datetime.now().strftime("%Y-%m-%d_%H.%M.%S")}_{secrets.token_hex(8)}.log', "w", encoding="utf-8"),
+
+    Rtime = datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
+    session['log'] = NewLog.session(open(f"{os.path.join('Logs', f'{Rtime}_{secrets.token_hex(8)}.log')}", "w", encoding="utf-8"),
                                         NewLog.level._lv0DEBUG_)
     
     session["log"].add(f"Time to load all module : {time_load_module / 1_000_000} ms", "INFO")
@@ -363,7 +364,7 @@ def main(session: dict):
                 futures.append(session['ThreadPool'].submit(download_boot, url[0], url[1], prefix, out))
             for i in futures:
                 i.result()
-            Archive.Archive.unzip("Temp\\transmission-4.0.6-qt5-x64.msi", "Temp\\transmission", log=session['log'])
+            Archive.Archive.unzip(os.path.join("Temp", "transmission-4.0.6-qt5-x64.msi"), os.path.join("Temp", "transmission"), log=session['log'])
             #zip7.install(sessionLog=session["log"])
             sys.exit(0)
     
@@ -378,7 +379,11 @@ def main(session: dict):
     threads.append(threading.Thread(target=update.thread, daemon=True).start())
 
     if configJson["api"]["enable"]:
+        print(f"API : {configJson["api"]["host"]}:{configJson["api"]["port"]}")
         session["api"] = api.api(host=configJson["api"]["host"], port=configJson["api"]["port"], fork=True, reload=False)
+        session["api"].run()
+    else:
+        print(f"API : {c.ORANGE}disable{c.RESET}")
     
     if os.path.isfile("PATH.txt"):
         with open("PATH.txt", "r", encoding="utf-8") as f:
@@ -649,7 +654,7 @@ def main(session: dict):
             
             elif rep[:6].lower() == "start ":
                 module = rep[6:].strip()
-                Racine = f"{os.getcwd()}\\Module\\{module}"
+                Racine = f"{os.path.join(os.getcwd(), 'Module', module)}"
                 
                 py = os.path.join(Racine, '__Main__.py')
                 if os.path.isfile(py):
@@ -741,7 +746,7 @@ def main(session: dict):
                         subprocess.run(rep, shell=True)
                 else:
                     print(c.ROUGE[0] + "Unknown command" + c.RESET)
-                    with open("completist\\commande.txt", "r", encoding="utf-8") as fichier:
+                    with open(os.path.join("completist", "commande.txt"), "r", encoding="utf-8") as fichier:
                         COMMANDS = [ligne.strip() for ligne in fichier if ligne.strip() and not ligne.startswith("#")]
                     correspondances = difflib.get_close_matches(rep, COMMANDS, n=5, cutoff=0.6)
                     if correspondances:
