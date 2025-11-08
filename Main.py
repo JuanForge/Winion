@@ -23,7 +23,6 @@ import random
 import signal
 import struct
 import shutil
-import winreg
 import difflib
 import gettext
 import hashlib
@@ -56,7 +55,7 @@ from Lib.Debug import log as NewLog
 
 from src import api
 from src import APT
-from src import Tor
+# from src import Tor
 from src import Help
 from src import i18n
 #from src import zip7
@@ -79,6 +78,7 @@ from src.sendnotification import sendnotification
 
 if platform.system() == "Windows":
     import ctypes
+    import winreg
     import win32console # type: ignore
     import win32api  # type: ignore
 
@@ -337,8 +337,8 @@ def main(session: dict):
             
             #Tor.install(log=session["log"])
             
-            clientTor = Tor.launch()
-            time.sleep(2)
+            #clientTor = Tor.launch()
+            #time.sleep(2)
             
             def download_boot(url, headers, prefix, out) -> bool:
                 with open(out, 'wb') as file:
@@ -367,7 +367,7 @@ def main(session: dict):
             #zip7.install(sessionLog=session["log"])
             sys.exit(0)
     
-    clientTor = Tor.launch()
+    #clientTor = Tor.launch()
     
     def sendAD():
         while True:

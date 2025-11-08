@@ -13,8 +13,12 @@ from fastapi.templating import Jinja2Templates
 from importlib import metadata
 from importlib.metadata import PackageNotFoundError
 
-import VERSION
-import sendnotification
+if __name__ == "__main__":
+    import VERSION
+    import sendnotification
+else:
+    from src import VERSION
+    from src import sendnotification
 
 
 if __name__ == "__main__":
