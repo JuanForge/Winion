@@ -9,7 +9,9 @@ import libarchive   // QUE UNIX
 import os
 import magic
 import zipfile
+import platform
 import subprocess
+
 
 from pathlib import Path
 from typing import Optional
@@ -56,7 +58,7 @@ class Archive:
 
         os.makedirs(output, exist_ok=True)
         
-        result = subprocess.run(f'call "Bin\\7zip\\7z.exe" x "{fichier}" -o"{output}" -mmt=on -bb -y', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        result = subprocess.run(f'"7z" x "{fichier}" -o"{output}" -mmt=on -bb -y', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True) # call
 
         if result.returncode == 0:
             log.add(f"Décompression OK")
@@ -65,8 +67,13 @@ class Archive:
             if not os.path.isfile(fichier):
                 raise errors.NotFoundArchive()
             
-            elif not os.path.isfile("Bin\\7zip\\7z.exe"):
-                raise errors.NotFound7zip()
+            if platform.system() == "Linux":
+                if not os.path.isfile("7z"):
+                    raise errors.NotFound7zip()
+            
+            elif platform.system() == "Windows":
+                if not os.path.isfile("7z.exe"):
+                    raise errors.NotFound7zip()
             
             else:
                 log.add(f"ERREUR : {result.stdout}, = {result.returncode}", level='ERROR')

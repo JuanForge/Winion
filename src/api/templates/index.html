@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The GOAT</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    backdrop-filter: blur(6px);
+}
+.navbar h2 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+.github-btn {
+    padding: 8px 16px;
+    background: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.github-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+.container {
+    text-align: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.container:hover {
+    transform: scale(1.05);
+}
+img {
+    max-width: 400px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+h1 {
+    margin: 15px 0 25px;
+    color: #333;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+    <h2>The GOAT</h2>
+    <a href="https://github.com/JuanForge" class="github-btn" target="_blank">GitHub</a>
+</div>
+<div class="container">
+    <img src="/static/zazu-cat_0.png" alt="Zazu Cat">
+    <h1>Zazu Cat</h1>
+</div>
+</body>
+</html>

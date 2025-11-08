@@ -54,6 +54,7 @@ from prompt_toolkit.shortcuts import button_dialog
 from Lib.Cache import Cache
 from Lib.Debug import log as NewLog
 
+from src import api
 from src import APT
 from src import Tor
 from src import Help
@@ -370,11 +371,14 @@ def main(session: dict):
     
     def sendAD():
         while True:
-            time.sleep(120)
+            time.sleep(60 * 3)
             sendnotification(_("💜 Si Winion vous plaît, vous pouvez soutenir le projet en tapant") + " : donation", "❤️ Winion Donation ❤️")
     
     threads.append(threading.Thread(target=sendAD, daemon=True).start())
     threads.append(threading.Thread(target=update.thread, daemon=True).start())
+
+    if configJson["api"]["enable"]:
+        session["api"] = api.api(host=configJson["api"]["host"], port=configJson["api"]["port"], fork=True, reload=False)
     
     if os.path.isfile("PATH.txt"):
         with open("PATH.txt", "r", encoding="utf-8") as f:
@@ -787,6 +791,7 @@ if __name__ == "__main__":
                     zf.writestr("Trace.json", json.dumps({}, indent=2))
         finally:
             actions = [
+                lambda: session["api"].stop(),
                 lambda: session["trayservice"].stop(),
                 lambda: session["ThreadPool"].shutdown(wait=True),
                 lambda: sys.settrace(None),

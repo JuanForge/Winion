@@ -19,9 +19,6 @@ from src.i18n import _
 if platform.system() == "Windows":
     import ctypes
     import win32console # type: ignore
-
-
-if platform.system() == "Windows":
     console_hwnd = win32console.GetConsoleWindow()
 
 console_visible = True
