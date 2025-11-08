@@ -342,11 +342,11 @@ class apt:
                             log.add("InstallOptimizer : non disponible")
                         
                         print(f"[{module['name']}] {module['name']} == {module['version']}")
-                        if not os.path.isfile(f"Cache\\{module['name']}=={module['version']}.7z"):
+                        if not os.path.isfile(os.path.join("Cache", f"{module['name']}=={module['version']}.7z")):
                             log.add(f"[{module['name']}] Cache : NON")
                             tempName = secrets.token_hex(16)
-                            os.makedirs(f"Temp\\{tempName}", exist_ok=True)
-                            tempDir = f"Temp\\{tempName}"
+                            os.makedirs(os.path.join("Temp", tempName), exist_ok=True)
+                            tempDir = os.path.join("Temp", tempName)
                             
                             print(f"[{module['name']}] {_('Methode')} : ", end='')
                             if module.get("torrent") and self.conf['torrent']['use']:
@@ -360,13 +360,13 @@ class apt:
                                 print(f"[{module['name']}] ModuleType:" + str(module["type"]))
                                 
                                 if module["type"] == 0:
-                                    out = open(f"{tempDir}\\{module['name']}=={module['version']}.7z.001", "wb")
+                                    out = open(os.path.join(tempDir, f"{module['name']}=={module['version']}.7z.001"), "wb")
                                 elif module['type'] == 1:
-                                    out = open(f"{tempDir}\\{module['name']}=={module['version']}.exe", "wb")
+                                    out = open(os.path.join(tempDir, f"{module['name']}=={module['version']}.exe"), "wb")
                                 elif module['type'] == 2:
                                     raise "INVALIDE TYPE 2"
                                 elif module['type'] == 3:
-                                    out = open(f"{tempDir}\\{module['name']}=={module['version']}.exe", "wb")
+                                    out = open(os.path.join(tempDir, f"{module['name']}=={module['version']}.exe"), "wb")
                                 else:
                                     raise errors.ModuleTypeUnknown(str(module['type']))
                                 
