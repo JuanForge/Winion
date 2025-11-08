@@ -532,7 +532,8 @@ def main(session: dict):
                         from tkinter import filedialog
                         
                         root = tk.Tk()
-                        root.iconbitmap("./Assets/icon.ico")
+                        #root.iconbitmap("./Assets/icon.png")
+                        root.iconphoto(False, tk.PhotoImage(file="./Assets/icon.png"))
                         root.withdraw()
                         
                         file = filedialog.askopenfilename(
@@ -658,14 +659,11 @@ def main(session: dict):
                 module = arguments[0]
                 del arguments[0]
                 Racine = f"{os.path.join(os.getcwd(), 'Module', module)}"
-                print(Racine)
                 if os.path.isdir(Racine):
                     version = json.loads(open(os.path.join(Racine, "index.json")).read())["lastVersion"]
                     
                     py = os.path.join(Racine, version, 'main.py')
                     cmd = shlex.join([sys.executable, py] + arguments)
-    
-                    print(cmd)
                     
                     if os.path.isfile(py):
                         with yaspin(spinner=spinners.Spinners.material, text=_("Process en cours..."), color="red", timer=True) as e:
@@ -766,7 +764,7 @@ def main(session: dict):
                         subprocess.run(rep, shell=True)
                 else:
                     print(c.ROUGE[0] + "Unknown command" + c.RESET)
-                    with open(os.path.join("completist", "commande.txt"), "r", encoding="utf-8") as fichier:
+                    with open(os.path.join("Completist", "commande.txt"), "r", encoding="utf-8") as fichier:
                         COMMANDS = [ligne.strip() for ligne in fichier if ligne.strip() and not ligne.startswith("#")]
                     correspondances = difflib.get_close_matches(rep, COMMANDS, n=5, cutoff=0.6)
                     if correspondances:
