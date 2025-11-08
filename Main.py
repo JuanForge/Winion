@@ -117,44 +117,45 @@ def main(session: dict):
                 sys.exit(44)
     configJson = settings.settings.load()
     
-    with open("settings.json", "r+") as f:
-        JSON = json.load(f)
-        if not JSON['LICENSEagree'] == True:
-            
-            console = Console()
-            
-            license_text = _("""
-            Creative Commons BY-NC-ND 4.0
-            
-            Utilisation autorisée :
-            - SANS usage commercial ;
-            - SANS modification ;
-            - AVEC attribution.
-            
-            https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr
-            
-            © 2025 JuanForge pour le projet Winion — Ce projet est sous licence Creative Commons Attribution - Non Commercial - Pas de Modification 4.0 International (CC BY-NC-ND 4.0).
-            Voir le fichier LICENSE ou https://creativecommons.org/licenses/by-nc-nd/4.0/deed pour les détails.
-            """)
-            
-            console.print(Panel(license_text, title=_("Licence")))
-            
-            if button_dialog(
-                    title=_("Accepter la licence"),
-                    text=f"{license_text} \n \n" + _("Souhaitez-vous continuer l'installation ?"),
-                    buttons=[
-                    (_("✔ Compris"), True),
-                    (_("✘ Refusé"), False),
-                ]
-                ).run():
-                    console.print(f"[bold green]✔ {_('Licence acceptée.')}[/]")
-                    f.seek(0)
-                    JSON['LICENSEagree'] = True
-                    json.dump(JSON, f, indent=4)
-                    f.truncate()
-            else:
-                    console.print(f"[bold red]✘ {_('Licence refusée.')} [/]")
-                    sys.exit(152)
+    if not VERSION.VERSION.release() == "DEV":
+        with open("settings.json", "r+") as f:
+            JSON = json.load(f)
+            if not JSON['LICENSEagree'] == True:
+                
+                console = Console()
+                
+                license_text = _("""
+                Creative Commons BY-NC-ND 4.0
+                
+                Utilisation autorisée :
+                - SANS usage commercial ;
+                - SANS modification ;
+                - AVEC attribution.
+                
+                https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr
+                
+                © 2025 JuanForge pour le projet Winion — Ce projet est sous licence Creative Commons Attribution - Non Commercial - Pas de Modification 4.0 International (CC BY-NC-ND 4.0).
+                Voir le fichier LICENSE ou https://creativecommons.org/licenses/by-nc-nd/4.0/deed pour les détails.
+                """)
+                
+                console.print(Panel(license_text, title=_("Licence")))
+                
+                if button_dialog(
+                        title=_("Accepter la licence"),
+                        text=f"{license_text} \n \n" + _("Souhaitez-vous continuer l'installation ?"),
+                        buttons=[
+                        (_("✔ Compris"), True),
+                        (_("✘ Refusé"), False),
+                    ]
+                    ).run():
+                        console.print(f"[bold green]✔ {_('Licence acceptée.')}[/]")
+                        f.seek(0)
+                        JSON['LICENSEagree'] = True
+                        json.dump(JSON, f, indent=4)
+                        f.truncate()
+                else:
+                        console.print(f"[bold red]✘ {_('Licence refusée.')} [/]")
+                        sys.exit(152)
     
     
     if configJson['TraceInjector']['DEBUG']['enable'] == True:
