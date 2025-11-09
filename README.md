@@ -146,6 +146,8 @@ Allows access to the development version (may contain bugs).⚠️
 git clone https://github.com/JuanForge/Winion.git
 cd Winion
 git submodule update --init --recursive
+python3 -m venv .venv
+source .venv/bin/activate
 
 pip install -r requirements-LINUX.txt
 # or
