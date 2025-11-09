@@ -28,49 +28,16 @@ Winion is a project designed and developed in France, with passion and enthusias
 The goal of Winion is to make command usage faster, without complex searches, while being accessible to new users and powerful for more experienced ones. I am extremely proud of this work and thrilled to share it with the community.
 
 
-## 📜 Licence
-
-Ce projet est protégé par la licence **Creative Commons Attribution - Non Commercial - Pas de Modification 4.0 International (CC BY-NC-ND 4.0)**.
-
-### Que permet cette licence ?
-
-- Utilisation, partage et redistribution libre, sous réserve d’attribution.
-- Interdiction d’utilisation commerciale.
-- Interdiction de modification ou d’adaptation du contenu.
-
-### Conditions importantes
-
-- **Attribution** : crédit obligatoire à l’auteur.
-- **Pas de modification** : redistribution uniquement dans sa forme originale.
-- **Non commercial** : usage personnel ou éducatif uniquement.
-
-### Responsabilités et marques
-
-- Le projet est fourni “tel quel”, sans aucune garantie. L’auteur décline toute responsabilité en cas de dommages directs ou indirects.
-- L’utilisation du nom, logo ou marques associées est interdite sans permission.
-
-### Redistribution et contact
-
-- Toute redistribution doit inclure cette licence et la mention d’origine.
-- Pour une utilisation commerciale ou modification, merci de contacter l’auteur sur Session : getsession@05d6aabf549e3d71180341db6ccaf9cd73f8413d4c88b1031eb7e806bb81ceda02.
-
----
-
-Pour plus d’informations, consultez la licence officielle :  
-[CC BY-NC-ND 4.0 — Voir licence](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr)
-
-
-
 # ❗️ Winion is not an emulation.
 It does not aim to reproduce a Linux kernel or to mimic a Unix terminal at a low level.
 It is an advanced simulation: it recreates the user experience, command behaviors, and typical interactions of a Linux shell, while running natively on Windows.
 The commands have been rewritten or adapted to take advantage of the specifics of the Windows environment while respecting Unix logic.
 The goal is to simulate the logic and efficiency of a Unix shell, without the overhead of full virtualization or emulation.
 
-- ✅ Windows 10/11 uniquement
-- ❌ Linux et MacOS non supportés
+✅ Windows 10/11 and Linux supported.
 
-## Sommaire
+# Sommaire
+- [Documentation](#-Documentation)
 - [Information](#ℹ%EF%B8%8F-information)
 - [Translation](#-Translation)
 - [Presentation](#-a-100-french-project-and-i-am-extremely-proud-of-it)
@@ -88,6 +55,12 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 - [License](#-licence-et-conditions-dutilisation-%EF%B8%8F)
 
 
+# 📁 Documentation
+- [📜 Changelog](./CHANGELOG.md)
+- [🤝 Contributing Guide](./CONTRIBUTING.md)
+- [📄 License](./LICENSE)
+
+
 # ℹ️ Information
 ### 1: Some parts of the README are quite old, which means that certain features are no longer available or not yet implemented.
 
@@ -102,13 +75,14 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 ### 6: Install JuanDEV’s CA from [**here**](#install-certificates), then install it > Local > Store > Trusted Root Certification Authorities.
 
 ### 9: (08.11) : Linux support is finally available!
-Winion can now run on distributions based on the Linux kernel (successfully tested on Ubuntu).
+- Winion can now run on distributions based on the Linux kernel (successfully tested on Ubuntu).
 This version is still undergoing optimization and stabilization before being ready for production use.
 ⚠️ The package system remains partially incompatible, as it was originally designed for Windows.
 Only packages written entirely in pure Python are currently supported.
 
-# 🔒 Actuellement Privé, Bientôt Open Source
-Winion est pour l’instant un projet privé, mais une fois qu’il aura une communauté assez grande, il passera en open source pour que chacun puisse contribuer et l’améliorer.
+## 📦 Versions / Updates
+Check the [CHANGELOG here](./CHANGELOG.md) to see the full list of changes.
+
 
 # What does it allow you to do ?
 Winion: A Terminal Without Limits!
@@ -140,16 +114,20 @@ curl -L -o "%TEMP%\CA.crt" "https://github.com/JuanForge/Winion/raw/refs/heads/m
 Download the latest version [**here**](https://github.com/JuanForge/Winion/releases/latest) (WinionSetup.exe).
 [![How to install Winion (installer) and module Ntop!](https://img.youtube.com/vi/dEWdlBmZ1_o/0.jpg)](https://www.youtube.com/watch?v=dEWdlBmZ1_o)
 
+### Download Releases
+| Version     |      Build     |PyVersion|   Date   | Link |
+|:-----------:|:--------------:|:-------:|:--------:|:----:|
+| 0.0.1-alpha |2025.09.08:23.22| 3.11.9  |2025-09-08|[Windows](https://github.com/JuanForge/Winion/releases/download/0.0.1-alpha/WinionSetup.exe)|
 
 ## 🛠 Alternative Installation (Git Sources)
 ⚠️ Reserved for developers or contributors.
-Allows access to the development version (may contain bugs).
+Allows access to the development version (may contain bugs). ⚠️
 ```bash
-  git clone https://github.com/JuanForge/Winion.git
-  cd Winion
-  git submodule update --init --recursive
-  pip install -r requirements.txt
-  python Main.py --boot
+git clone https://github.com/JuanForge/Winion.git
+cd Winion
+git submodule update --init --recursive
+pip install -r requirements.txt
+python Main.py --boot
 ```
 
 
@@ -205,7 +183,7 @@ In this case, there is no automatic solution: you can either request it to be ad
 
 
 # My recommended modules for your protection.
-|      nom      |   taille   | description |
+|      name      |   size     | description |
 |---------------|------------|-------------|
 | VeraCrypt     |   45.5 Mo  |Software that encrypts your files and drives to protect them with a password.|
 | GetSession    |   433 Mo   |A secure messaging service that encrypts your messages and protects your anonymity, without requiring a phone number or email (end-to-end).|
@@ -298,7 +276,7 @@ Clean the system (Clear temp files and cache). ⚠️ ( Non disponible ) ⚠️
 purge
 ```
 
-## 🚀 Optimisation
+# 🚀 Optimisation
 
 Installe le module d'optimisation des archives. ⚠️ ( Non disponible ) ⚠️
 
@@ -396,14 +374,42 @@ If you enjoy Winion and would like to support its development, you can make a do
 
 Thank you for your support! 🙏
 
-## Download Releases
-| Version     |      Build     |PyVersion|   Date   | Lien |
-|:-----------:|:--------------:|:-------:|:--------:|:----:|
-| 0.0.1-alpha |      ----      | 3.11.9  |   ----   |  ❌  |
-
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JuanForge/Winion&type=Date&cache=20250907)](https://www.star-history.com/#JuanForge/Winion&Date)
+
+
+# 📜 Licence
+
+Ce projet est protégé par la licence **Creative Commons Attribution - Non Commercial - Pas de Modification 4.0 International (CC BY-NC-ND 4.0)**.
+
+### Que permet cette licence ?
+
+- Utilisation, partage et redistribution libre, sous réserve d’attribution.
+- Interdiction d’utilisation commerciale.
+- Interdiction de modification ou d’adaptation du contenu.
+
+### Conditions importantes
+
+- **Attribution** : crédit obligatoire à l’auteur.
+- **Pas de modification** : redistribution uniquement dans sa forme originale.
+- **Non commercial** : usage personnel ou éducatif uniquement.
+
+### Responsabilités et marques
+
+- Le projet est fourni “tel quel”, sans aucune garantie. L’auteur décline toute responsabilité en cas de dommages directs ou indirects.
+- L’utilisation du nom, logo ou marques associées est interdite sans permission.
+
+### Redistribution et contact
+
+- Toute redistribution doit inclure cette licence et la mention d’origine.
+- Pour une utilisation commerciale ou modification, merci de contacter l’auteur sur Session : getsession@05d6aabf549e3d71180341db6ccaf9cd73f8413d4c88b1031eb7e806bb81ceda02.
+
+---
+
+Pour plus d’informations, consultez la licence officielle :  
+[CC BY-NC-ND 4.0 — Voir licence](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr)
+
 
 # 🛡️ Clause de non-responsabilité (Disclaimer)
 Ce logiciel est fourni "tel quel", sans aucune garantie explicite ou implicite, y compris mais sans s’y limiter, les garanties de qualité marchande, d’adéquation à un usage particulier, ou d’absence de virus, de comportements indésirables ou de dommages indirects.
