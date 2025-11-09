@@ -37,22 +37,25 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 ✅ Windows 10/11 and Linux supported.
 
 # Sommaire
-- [Documentation](#-Documentation)
-- [Information](#ℹ%EF%B8%8F-information)
-- [Translation](#-Translation)
-- [Presentation](#-a-100-french-project-and-i-am-extremely-proud-of-it)
-- [Project Status](#-actuellement-privé-bientôt-open-source)
-- [Functionality](#what-does-it-allow-you-to-do-)
-- [Installation](#-Recommended-Installation-release)
-- [Commandes](#%EF%B8%8F-2---commande)
-- [Developers](#-3---développeur)
-- [FAQ](#-4---faq)
-- [Multilingual support](#-5---support-multilingue)
-- [Auteurs](#auteurs)
-- [Sustain](#-Sustain-the-project)
-- [Releases](#download-releases)
-- [Star History](#star-history)
-- [License](#-licence-et-conditions-dutilisation-%EF%B8%8F)
+- [📁 - Documentation](#-Documentation)
+- [⚙️ - Key Features](#%EF%B8%8F-key-features)
+- [ℹ️ - Information](#ℹ%EF%B8%8F-information)
+- [🌍 - Translation](#-Translation)
+- [🎬 - Presentation](#-a-100-french-project-and-i-am-extremely-proud-of-it)
+- [🧭 - Project Status ( old )](#-actuellement-privé-bientôt-open-source)
+- [🧩 - Functionality](#what-does-it-allow-you-to-do-)
+- [💻 - Installation](#-Recommended-Installation-release)
+  - [📦 - Releases](#download-releases)
+- [⌨️ - Commandes](#%EF%B8%8F-2---commande)
+- [👨‍💻 - Developers](#-3---développeur)
+  - [Cache](#-31---cache)
+- [❓ - FAQ](#-4---faq)
+- [🌐 - Multilingual support](#-5---support-multilingue)
+- [👥 - Authors](#auteurs)
+- [💰 - Sustain](#-Sustain-the-project)
+- [✨ - Star History](#star-history)
+- [🛡️ - Disclaimer](#%EF%B8%8F-clause-de-non-responsabilité-disclaimer)
+- [📜 - License & Terms ⚖️](#-licence-et-conditions-dutilisation-%EF%B8%8F)
 
 
 # 📁 Documentation
@@ -377,9 +380,10 @@ Translations into other languages will be added later, either via automatic tran
 |  Hébreu    |  ❌  |    ❌    |
 
 Other languages may be added based on community contributions and requests! 🌍✨
-## Auteurs
+# 👥 Authors
 
-- [@WinionByJuan](https://www.tiktok.com/@winionbyjuan)
+- ## JuanForge (Main Developer)
+  - [@TikTok](https://www.tiktok.com/@winionbyjuan)
 
 
 # 💰 Sustain the project
