@@ -17,6 +17,7 @@ requests==2.32.5
 rich==14.1.0
 tqdm==4.67.1
 yaspin==3.1.0
+prettytable==3.16.0
 # --------- API
 fastapi==0.121.0
 uvicorn==0.38.0

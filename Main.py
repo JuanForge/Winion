@@ -46,6 +46,7 @@ from rich.table import Table
 from datetime import datetime
 from pyfiglet import FigletFont
 from rich.console import Console
+from prettytable import PrettyTable
 from yaspin import yaspin, spinners
 from concurrent.futures import ThreadPoolExecutor
 from prompt_toolkit.shortcuts import button_dialog
@@ -188,7 +189,7 @@ def main(session: dict):
             type=str,
             help=_('Commande à exécuter')
         )
-    
+    group.add_argument('--no-plugins', action='store_true', help=_("Démarrer sans plugins"))
     
     args, unknown = parser.parse_known_args()
     if unknown:
@@ -196,10 +197,12 @@ def main(session: dict):
         sys.exit(190)
     
     def outVersion():
-        print(f"Version : {c.VERT}{VERSION.VERSION.version()}{c.RESET}")
-        print(f"Build : {c.BLEU[2]}{VERSION.VERSION.build()}{c.RESET}")
-        print(f"Release : {c.ORANGE}{VERSION.VERSION.release()}{c.RESET}")
-        return True
+        t = PrettyTable()
+        t.field_names = ["Key", "Value"]
+        t.add_row(["Version", f"{c.VERT}{VERSION.VERSION.version()}{c.RESET}"])
+        t.add_row(["Build", f"{c.BLEU[2]}{VERSION.VERSION.build()}{c.RESET}"])
+        t.add_row(["Release", f"{c.ORANGE}{VERSION.VERSION.release()}{c.RESET}"])
+        print(t)
     
     if args.version:
         outVersion()
