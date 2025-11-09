@@ -5,15 +5,16 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/JuanForge/Winion?label=Version&color=00FF00">
-  <img src="https://img.shields.io/github/stars/JuanForge/Winion?style=flat&label=Stars&color=00FF00">
-  <img src="https://img.shields.io/github/repo-size/JuanForge/Winion?label=Size&color=00FF00">
-  <img src="https://img.shields.io/github/languages/top/JuanForge/Winion?color=00FF00">
-  <img src="https://img.shields.io/badge/Platform-Windows-blue?style=flat&logo=windows&logoColor=white">
+  <img src="https://img.shields.io/github/v/release/JuanForge/Winion?label=Version&color=white">
+  <img src="https://img.shields.io/github/stars/JuanForge/Winion?style=flat&label=Stars&color=white">
+  <img src="https://img.shields.io/github/repo-size/JuanForge/Winion?label=Size&color=white">
+  <img src="https://img.shields.io/github/languages/top/JuanForge/Winion?color=white">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-blue?style=flat">
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-blue">
-  <img src="https://img.shields.io/github/last-commit/JuanForge/Winion.svg">
+  <img src="https://img.shields.io/github/last-commit/JuanForge/Winion.svg?color=white">
   <img src="https://img.shields.io/badge/TikTok-@winionbyjuan-dc143c?style=flat&logo=tiktok&logoColor=white">
   <img src="https://img.shields.io/badge/Discord-Rejoindre-5865f2?style=flat&logo=discord&logoColor=white">
+  <img src="https://img.shields.io/github/downloads/JuanForge/Winion/latest/total?color=white&label=Downloads">
 </p>
 
 # 🚨⚠️ Face aux propositions de vote à l’UE qui piétinent les droits fondamentaux à l’anonymat et à la liberté, ce logiciel a été publié en urgence, bien plus tôt que prévu. Il est une arme numérique destinée à défendre vos droits et à résister à la surveillance de masse, en fournissant des modules puissants permettant des communications chiffrées de bout en bout, hors d’atteinte de toute censure. ⚠️🚨
@@ -36,6 +37,13 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 
 ✅ Windows 10/11 and Linux supported.
 
+# 🧩 Security Policy
+If you discover a vulnerability or potential security issue, please **do not disclose it publicly**.  
+Instead, contact the author directly via **Session** for a secure and private report.
+
+All reports will be treated with priority.
+
+
 # Sommaire
 - [📁 - Documentation](#-Documentation)
 - [⚙️ - Key Features](#%EF%B8%8F-key-features)
@@ -51,7 +59,8 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
   - [Cache](#-31---cache)
 - [❓ - FAQ](#-4---faq)
 - [🌐 - Multilingual support](#-5---support-multilingue)
-- [👥 - Authors](#auteurs)
+- [👤 - Authors](#-authors)
+- [👥 - Authors](#-Contributors)
 - [💰 - Sustain](#-Sustain-the-project)
 - [✨ - Star History](#star-history)
 - [🛡️ - Disclaimer](#%EF%B8%8F-clause-de-non-responsabilité-disclaimer)
@@ -59,6 +68,7 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 
 
 # 📁 Documentation
+- [🚨 Security Policy](./SECURITY.md)
 - [📜 Changelog](./CHANGELOG.md)
 - [🤝 Contributing Guide](./CONTRIBUTING.md)
 - [📄 License](./LICENSE)
@@ -380,10 +390,17 @@ Translations into other languages will be added later, either via automatic tran
 |  Hébreu    |  ❌  |    ❌    |
 
 Other languages may be added based on community contributions and requests! 🌍✨
-# 👥 Authors
+# 👤 Authors
 
 - ## JuanForge (Main Developer)
   - [@TikTok](https://www.tiktok.com/@winionbyjuan)
+
+
+# 👥 Contributors
+| Pseudo  | Role | Contact |
+|---------|------|---------|
+|JuanForge| Founder & Lead Dev | [Session](05d6aabf549e3d71180341db6ccaf9cd73f8413d4c88b1031eb7e806bb81ceda02) |
+| (You?)  | Future contributor | Join the Discord! |
 
 
 # 💰 Sustain the project
