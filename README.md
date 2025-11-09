@@ -61,6 +61,19 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 - [📄 License](./LICENSE)
 
 
+# ⚙️ Key Features
+| Feature | Description |
+|----------|--------------|
+| 🧠 Smart CLI | Linux-like command interpreter optimized for Windows |
+| 🔐 Privacy Oriented | Built-in encryption and anonymity tools |
+| ⚡ Fast Execution | Optimized commands for speed and clarity |
+| 🧩 Modular System | Thousands of compatible packages |
+| 🌍 Multilingual | French, English, and Spanish support |
+| 💻 Cross Platform | Works on Windows and Linux |
+
+
+
+
 # ℹ️ Information
 ### 1: Some parts of the README are quite old, which means that certain features are no longer available or not yet implemented.
 
@@ -120,13 +133,17 @@ Download the latest version [**here**](https://github.com/JuanForge/Winion/relea
 | 0.0.1-alpha |2025.09.08:23.22| 3.11.9  |2025-09-08|[Windows](https://github.com/JuanForge/Winion/releases/download/0.0.1-alpha/WinionSetup.exe)|
 
 ## 🛠 Alternative Installation (Git Sources)
-⚠️ Reserved for developers or contributors.
-Allows access to the development version (may contain bugs). ⚠️
+⚠️Reserved for developers or contributors.
+Allows access to the development version (may contain bugs).⚠️
 ```bash
 git clone https://github.com/JuanForge/Winion.git
 cd Winion
 git submodule update --init --recursive
-pip install -r requirements.txt
+
+pip install -r requirements-LINUX.txt
+# or
+pip install -r requirements-WIN.txt
+
 python Main.py --boot
 ```
 
