@@ -37,14 +37,8 @@ The goal is to simulate the logic and efficiency of a Unix shell, without the ov
 
 ✅ Windows 10/11 and Linux supported.
 
-# 🧩 Security Policy
-If you discover a vulnerability or potential security issue, please **do not disclose it publicly**.  
-Instead, contact the author directly via **Session** for a secure and private report.
 
-All reports will be treated with priority.
-
-
-# Sommaire
+# Table of Contents
 - [📁 - Documentation](#-Documentation)
 - [⚙️ - Key Features](#%EF%B8%8F-key-features)
 - [ℹ️ - Information](#ℹ%EF%B8%8F-information)
