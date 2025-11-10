@@ -1,6 +1,10 @@
 .venv/
 venv/
 *.pyc
+build2.py
+Build2.py
+requirements-Builder.txt
+build-test.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
