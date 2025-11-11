@@ -1,4 +1,8 @@
+import os
+import sys
+import polib
 import requests
+import subprocess
 from typing import Union
 class Translator:
     def __init__(self, source_lang: str = "auto", target_lang: str = "en"):
@@ -26,6 +30,21 @@ class Translator:
         response.raise_for_status()
         return response.json()["translatedText"]
         #if isinstance(text, list):
+class extract:
+    def __init__(self):
+        pass
+    def main(self, path: list, base = os.getcwd()) -> list:
+        LISTE = []
+        for base_dir in path:
+            if os.path.isdir(base_dir):
+                for root, dirs, filenames in os.walk(base_dir):
+                    for filename in filenames:
+                        rel_root = os.path.relpath(root, base)
+                        if filename.endswith(".py"):
+                            LISTE.append(os.path.join(rel_root, filename))
+            else:
+                LISTE.append(base_dir)
+        return LISTE
 
 sentences = [
     "Hello, how are you today?",
@@ -57,10 +76,41 @@ sentences = [
 
 if __name__ == "__main__":
     import time
-    session = Translator("fr", "en")
-    print(session.translate("Bonjour "))
-    print(session.translate(["Bonjour "]))
+    folders = extract().main(["./main.py", "./src", "./Lib"])
+    print(folders)
+    cmd = [
+        sys.executable,
+        os.path.join("Tools", "pygettext.py"),
+        "-d", "Winion",
+        "-o", "Winion.pot"
+    ] + folders
+    env = os.environ.copy()
+    env["PYTHONUTF8"] = "1"
+    env["PYTHONIOENCODING"] = "utf-8"
+    subprocess.run(cmd, check=True, env=env)
 
-    start_time = time.perf_counter_ns()
-    print(Translator("en", "fr").translate(sentences))
-    print(time.perf_counter_ns() - start_time)
+    for i in ["en", "he", "es"]:
+        po = polib.pofile("Winion.pot")
+        session = Translator("fr", i)
+        for entry in po:
+            if entry.msgid.strip() and not entry.translated():
+                for file_path, lineno in entry.occurrences:
+                    print(f"{os.path.relpath(file_path, os.getcwd())}:{lineno}")
+                entry.msgstr = session.translate(entry.msgid)
+        
+        po.metadata = {"Content-Type": r"text/plain; charset=UTF-8", "language": i.lower()}
+        #po.metadata = {}
+        # po.save(os.path.join(OutBuild, "Languages", ISOout.lower(), "LC_MESSAGES", "Winion.po"))
+        po.save(f"{i}.po")
+        # po.save_as_mofile(os.path.join(OutBuild, "./Languages", ISOout.lower(), "LC_MESSAGES", "Winion.mo"))
+        po.save_as_mofile(f"{i}.mo")
+        
+
+    if True == False:
+        session = Translator("fr", "en")
+        print(session.translate("Bonjour "))
+        print(session.translate(["Bonjour "]))
+
+        start_time = time.perf_counter_ns()
+        print(Translator("en", "fr").translate(sentences))
+        print(time.perf_counter_ns() - start_time)
