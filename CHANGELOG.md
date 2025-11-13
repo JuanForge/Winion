@@ -34,3 +34,11 @@ Only packages written entirely in pure Python are currently supported.
 ### Removed
 
 ### Information
+
+# [0.0.2-alpha] - 2025-11-11
+### Fixed
+- Implementation of an open-source alternative aimed at improving translation quality and correcting inconsistencies found in the previous translation engine.
+
+# [0.0.2-alpha] - 2025-11-13
+### Added
+- Added a remote security check at Winion startup via the community repository winion-status, displaying an alert message and blocking startup if a potential issue is detected, while providing the --no-remote-check option for experienced users wishing to bypass this check, with a warning about the associated risks.

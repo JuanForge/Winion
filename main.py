@@ -178,18 +178,30 @@ def main(session: dict):
         description=_("Programme principal."),
         allow_abbrev=False
     )
+
+    mode_group = parser.add_argument_group(_("Modes d'exécution."))
+    exclusive_modes = mode_group.add_mutually_exclusive_group()
+    exclusive_modes.add_argument('--boot', action='store_true', help=_("Exécute les tests unitaires."))
+    exclusive_modes.add_argument('--benchmark', action='store_true', help=_("Exécute un benchmark interne."))
+    exclusive_modes.add_argument('--version', action='store_true', help=_("Afficher la version et le build."))
+
+    options_group = parser.add_argument_group(_("Options générales"))
+    options_group.add_argument('--no-remote-check', action='store_true', help=_("Désactive la vérification distante des failles."))
+    options_group.add_argument('--no-plugins', action='store_true', help=_("Démarrer sans plugins."))
+    options_group.add_argument('--commande', type=str, help=_("Commande à exécuter."))
+
+    #group = parser.add_mutually_exclusive_group(required=False)
     
-    group = parser.add_mutually_exclusive_group(required=False)
-    
-    group.add_argument('--benchmark', action='store_true', help=_("Exécute un benchmark interne."))
-    group.add_argument('--boot', action='store_true', help=_("Exécute les tests unitaires."))
-    group.add_argument('--version', action='store_true', help=_("Afficher la version et build"))
-    parser.add_argument(
-            '--commande',
-            type=str,
-            help=_('Commande à exécuter')
-        )
-    group.add_argument('--no-plugins', action='store_true', help=_("Démarrer sans plugins"))
+    #group.add_argument('--benchmark', action='store_true', help=_("Exécute un benchmark interne."))
+    #group.add_argument('--boot', action='store_true', help=_("Exécute les tests unitaires."))
+    #group.add_argument('--version', action='store_true', help=_("Afficher la version et build."))
+    #parser.add_argument(
+    #        '--commande',
+    #        type=str,
+    #        help=_('Commande à exécuter')
+    #    )
+    #parser.add_argument('--no-plugins', action='store_true', help=_("Démarrer sans plugins"))
+    #parser.add_argument('--no-remote-check', action='store_true', help=_("Désactive la vérification distante des failles."))
     
     args, unknown = parser.parse_known_args()
     if unknown:
@@ -335,9 +347,9 @@ def main(session: dict):
                 key = winreg.CreateKey(winreg.HKEY_CURRENT_USER, r"Console")
                 winreg.SetValueEx(key, "VirtualTerminalLevel", 0, winreg.REG_DWORD, 1) # shell  :  reg add "HKEY_CURRENT_USER\Console" /v VirtualTerminalLevel /t REG_DWORD /d 1 /f
                 winreg.CloseKey(key)
-                print(_("✅ Couleurs ANSI activées avec succès."))
+                print(_("Couleurs ANSI activées avec succès."))
             except Exception as e:
-                print(_("❌ Erreur lors de la modification du registre") + f" : {e}")
+                print(_("Erreur lors de la modification du registre") + f" : {e}")
                 sys.exit(331)
             
             #Tor.install(log=session["log"])
@@ -383,7 +395,7 @@ def main(session: dict):
     threads.append(threading.Thread(target=update.thread, daemon=True).start())
 
     if configJson["api"]["enable"]:
-        print(f"API : {configJson["api"]["host"]}:{configJson["api"]["port"]}")
+        print(f"API : {c.VERT} http://{configJson["api"]["host"]}:{configJson["api"]["port"]} {c.RESET}")
         session["api"] = api.api(host=configJson["api"]["host"], port=configJson["api"]["port"], fork=True, reload=False)
         session["api"].run()
     else:
@@ -463,8 +475,19 @@ def main(session: dict):
             upnp = upnpMapPorts()
         
         upnp = Menu()
-        
-        
+    
+    try:
+        if session["requests"].get("https://raw.githubusercontent.com/JuanForge/winion-status/refs/heads/main/status.json").json()["status"] != True:
+            print(_("Message de la communauté : une alerte de sécurité a été publiée."))
+
+            print(_("Attention : le serveur distant de la communauté indique un état anormal, un problème potentiel a été signalé."))
+            print(_("Il est possible qu'une faille, un bug critique ou un risque d’instabilité soit présent dans cette version."))
+            print(_("Consultez la page officielle d’état pour plus d’informations : https://github.com/JuanForge/winion-status."))
+
+            print(_("Démarrage interrompu par mesure de sécurité. Utilisez --no-remote-check pour ignorer cette vérification, n’utilisez cette option que si vous comprenez les risques et assumez la responsabilité de votre session."))
+    except Exception as e:
+        session["log"].add(str(e), "WARNING")
+    
     while not STOP[0]:
         if args.commande:
             if ArgumentExit:
@@ -542,7 +565,7 @@ def main(session: dict):
                         
                         file = filedialog.askopenfilename(
                             title=_("Sélectionnez un fichier .MO."),
-                            filetypes=[("Fichiers MO", "*.mo")]
+                            filetypes=[(_("Fichiers MO"), "*.mo")]
                         )
                     except ImportError:
                         print(_("Vous devez spécifier le fichier .MO en argument."))
