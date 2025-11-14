@@ -487,13 +487,8 @@ def main(session: dict):
             print(_("Démarrage interrompu par mesure de sécurité. Utilisez --no-remote-check pour ignorer cette vérification, n’utilisez cette option que si vous comprenez les risques et assumez la responsabilité de votre session."))
     except Exception as e:
         session["log"].add(str(e), "WARNING")
-    
-    while not STOP[0]:
-        if args.commande:
-            if ArgumentExit:
-                sys.exit()
-        
-        sys.stdout.write(rf"""
+
+    sys.stdout.write(rf"""
 {c.BLEU[2]}::::::::::::::::::::::::::::::::::::::::::::::::::::^^^^^^^^^^^^^^^:^^^^^^^^^^^^^^^^^^^^^^^^^:^^^^^^
 {c.BLEU[2]}::::::::::::::::::::::::::::::::::::::::::::::::^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^::::^^^^^^
 {c.BLEU[2]}::::::::::::::::::::::::::::::::::::::::::::::::~G5::^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -537,7 +532,12 @@ def main(session: dict):
 {c.ROUGE[2]}^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^:^^^~~~~~!!!!7!!~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 {c.ROUGE[2]}^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^{c.RESET}
 """)
-        print("🕊️  13 novembre, NI OUBLI, NI PARDON. 🕊️")
+    print("🕊️  13 novembre, NI OUBLI, NI PARDON. 🕊️")
+
+    while not STOP[0]:
+        if args.commande:
+            if ArgumentExit:
+                sys.exit()
         print(f"{c.VERT}┌──({c.BLEU[0]}Winion{c.ROUGE[0]}@{c.BLEU[0]}DESKTOP-{platform.system()}{c.VERT})-[{c.BLANC}{os.getcwd()}{c.VERT}]")
         print(f"{c.VERT}└─{c.BLEU[0]}${c.RESET}", end='')
         
@@ -584,6 +584,8 @@ def main(session: dict):
                                 open(os.path.join("./Languages", "default", "LC_MESSAGES", "Winion.mo"), "wb").write(
                                     open(os.path.join("./Languages", rep[2], "LC_MESSAGES", "Winion.mo"), "rb").read()
                                 )
+                                i18n._update()
+                                print(_("Mise à jour de la langue effectuée."))
                                 print("✅")
                                 continue
                             else:

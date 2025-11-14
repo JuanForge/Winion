@@ -43,3 +43,7 @@ Only packages written entirely in pure Python are currently supported.
 ### Added
 - Added a remote security check at Winion startup via the community repository winion-status, displaying an alert message and blocking startup if a potential issue is detected, while providing the --no-remote-check option for experienced users wishing to bypass this check, with a warning about the associated risks.
 - Tribute to the victims of the Islamic attacks on November 13.
+
+# [0.0.2-alpha] - 2025-11-14
+### Added
+- The Winion translation system now allows changing the language on the fly, without requiring an application restart.
