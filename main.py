@@ -487,7 +487,7 @@ def main(session: dict):
             print(_("Démarrage interrompu par mesure de sécurité. Utilisez --no-remote-check pour ignorer cette vérification, n’utilisez cette option que si vous comprenez les risques et assumez la responsabilité de votre session."))
     except Exception as e:
         session["log"].add(str(e), "WARNING")
-
+    '''
     sys.stdout.write(rf"""
 {c.BLEU[2]}::::::::::::::::::::::::::::::::::::::::::::::::::::^^^^^^^^^^^^^^^:^^^^^^^^^^^^^^^^^^^^^^^^^:^^^^^^
 {c.BLEU[2]}::::::::::::::::::::::::::::::::::::::::::::::::^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^::::^^^^^^
@@ -533,6 +533,7 @@ def main(session: dict):
 {c.ROUGE[2]}^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^{c.RESET}
 """)
     print("🕊️  13 novembre, NI OUBLI, NI PARDON. 🕊️")
+    '''
 
     while not STOP[0]:
         if args.commande:
